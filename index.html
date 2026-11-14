@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sri Bhagyalakshmi Foods — Rooted in Tradition. Driven by Quality.</title>
+<meta name="description" content="Sri Bhagyalakshmi Foods (SBL): a 50+ year food processing legacy. Dals, pulses, flours, suji, rice and more.">
+<meta name="theme-color" content="#F5EEDF">
+<meta property="og:title" content="Sri Bhagyalakshmi Foods — Rooted in Tradition. Driven by Quality."><meta property="og:description" content="Sri Bhagyalakshmi Foods (SBL): a 50+ year food processing legacy. Dals, pulses, flours, suji, rice and more."><meta property="og:image" content="assets/img/photos/cover.webp">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/fraunces-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* ==========================================================================
+   SBL FOODS — Version B · "Cinematic Scroll Story"
+   Ivory editorial base · wine & saffron accents · GSAP + Lenis motion
+   ========================================================================== */
+
+@font-face{font-family:"Fraunces";src:url(assets/fonts/fraunces-latin-300-normal.woff2) format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:"Fraunces";src:url(assets/fonts/fraunces-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Fraunces";src:url(assets/fonts/fraunces-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Fraunces";src:url(assets/fonts/fraunces-latin-300-italic.woff2) format("woff2");font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:"Fraunces";src:url(assets/fonts/fraunces-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Fraunces";src:url(assets/fonts/fraunces-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
+@font-face{font-family:"Jakarta";src:url(assets/fonts/plus-jakarta-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Jakarta";src:url(assets/fonts/plus-jakarta-sans-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Jakarta";src:url(assets/fonts/plus-jakarta-sans-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Jakarta";src:url(assets/fonts/plus-jakarta-sans-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Jakarta";src:url(assets/fonts/plus-jakarta-sans-latin-800-normal.woff2) format("woff2");font-weight:800;font-display:swap}
+
+:root{
+  --paper:#FBF8F1;
+  --ivory:#F5EEDF;
+  --ivory-2:#ECE1CB;
+  --sand:#E2D3B5;
+  --ink:#17120F;
+  --ink-2:#4B423B;
+  --ink-3:#8A7F75;
+  --wine:#7B1C2E;
+  --wine-2:#5C1221;
+  --wine-3:#3B0A15;
+  --saffron:#E0A22A;
+  --saffron-2:#F2C66A;
+  --saffron-3:#B57B12;
+  --leaf:#56652B;
+  --line:rgba(23,18,15,.12);
+  --line-2:rgba(23,18,15,.22);
+  --line-light:rgba(251,248,241,.16);
+
+  --f-display:"Fraunces",Georgia,serif;
+  --f-body:"Jakarta",system-ui,-apple-system,"Segoe UI",sans-serif;
+
+  --t-xs:.74rem;--t-sm:.875rem;--t-base:1rem;
+  --t-lg:clamp(1.08rem,1rem + .45vw,1.3rem);
+  --t-h4:clamp(1.25rem,1.1rem + .6vw,1.6rem);
+  --t-h3:clamp(1.6rem,1.25rem + 1.3vw,2.4rem);
+  --t-h2:clamp(2.3rem,1.5rem + 3.4vw,4.6rem);
+  --t-h1:clamp(3rem,1.6rem + 6vw,7.6rem);
+  --t-mega:clamp(4rem,2rem + 12vw,15rem);
+
+  --wrap:1320px;
+  --pad:clamp(1.25rem,.5rem + 3vw,3rem);
+  --sec:clamp(5rem,3.5rem + 7vw,10rem);
+  --hh:76px;
+  --r:18px;--r-lg:28px;--r-xl:44px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease-2:cubic-bezier(.76,0,.24,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--t-base);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg,canvas{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;padding:0;cursor:pointer}
+ul{list-style:none;margin:0;padding:0}
+p{margin:0 0 1.1em}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:400;line-height:1.02;letter-spacing:-.025em;margin:0 0 .45em;font-variation-settings:"SOFT" 100,"WONK" 0}
+em,.it{font-style:italic;font-weight:300}
+::selection{background:var(--saffron-2);color:var(--ink)}
+:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:1rem;top:-80px;z-index:9999;background:var(--ink);color:var(--paper);padding:.6rem 1rem;border-radius:8px}
+.skip:focus{top:1rem}
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+main,footer{overflow-x:clip}
+
+.wrap{width:100%;max-width:calc(var(--wrap) + var(--pad)*2);margin-inline:auto;padding-inline:var(--pad)}
+.sec{padding-block:var(--sec);position:relative}
+.sec--ivory{background:var(--ivory)}
+.sec--ink{background:var(--ink);color:var(--paper)}
+.sec--wine{background:var(--wine-3);color:var(--paper)}
+.sec--ink h2,.sec--ink h3,.sec--wine h2,.sec--wine h3{color:var(--paper)}
+
+/* labels & type */
+.label{display:inline-flex;align-items:center;gap:.6rem;font-size:var(--t-xs);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
+.label b{font-family:var(--f-display);font-style:italic;font-weight:400;letter-spacing:0;font-size:.95rem;color:var(--wine);text-transform:none}
+.sec--ink .label,.sec--wine .label{color:rgba(251,248,241,.7)}
+.sec--ink .label b,.sec--wine .label b{color:var(--saffron-2)}
+.h1{font-size:var(--t-h1)}
+.h2{font-size:var(--t-h2)}
+.h3{font-size:var(--t-h3)}
+.lead{font-size:var(--t-lg);color:var(--ink-2);line-height:1.6}
+.sec--ink .lead,.sec--wine .lead{color:rgba(251,248,241,.72)}
+.muted{color:var(--ink-3)}
+.wine{color:var(--wine)}
+.saffron{color:var(--saffron)}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+.head{display:grid;gap:1.5rem 4rem;margin-bottom:clamp(3rem,2rem + 3vw,5.5rem);align-items:end}
+@media (min-width:900px){.head{grid-template-columns:1.25fr .75fr}}
+.head .lead{margin:0}
+.head--c{text-align:center;justify-items:center;grid-template-columns:1fr!important;max-width:900px;margin-inline:auto}
+
+/* split text */
+.split-line{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.split-line>span{display:inline-block;will-change:transform}
+.char{display:inline-block;will-change:transform}
+.word{display:inline-block;white-space:nowrap}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;gap:.8rem;min-height:56px;padding:0 1.6rem 0 1.8rem;border-radius:999px;background:var(--ink);color:var(--paper);font-weight:700;font-size:.92rem;letter-spacing:.01em;overflow:hidden;isolation:isolate;transition:color .5s var(--ease)}
+.btn::before{content:"";position:absolute;left:50%;top:100%;width:140%;aspect-ratio:1;border-radius:50%;background:var(--saffron);z-index:-1;transform:translate(-50%,0) scale(.2);transition:transform .7s var(--ease),top .7s var(--ease)}
+.btn:hover::before,.btn:focus-visible::before{top:-30%;transform:translate(-50%,0) scale(1)}
+.btn:hover,.btn:focus-visible{color:var(--ink)}
+.btn__ico{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--saffron);color:var(--ink);transition:transform .6s var(--ease),background .5s}
+.btn:hover .btn__ico{background:var(--ink);color:var(--saffron);transform:rotate(-45deg)}
+.btn--light{background:var(--paper);color:var(--ink)}
+.btn--wine{background:var(--wine)}
+.btn--line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line-2)}
+.btn--line .btn__ico{background:var(--ink);color:var(--paper)}
+.sec--ink .btn--line,.sec--wine .btn--line{color:var(--paper);box-shadow:inset 0 0 0 1.5px var(--line-light)}
+.sec--ink .btn--line .btn__ico,.sec--wine .btn--line .btn__ico{background:var(--paper);color:var(--ink)}
+.magnetic{will-change:transform}
+.ulink{position:relative;font-weight:700;display:inline-flex;align-items:center;gap:.5rem}
+.ulink::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1.5px;background:currentColor;transform-origin:right;transform:scaleX(1);transition:transform .6s var(--ease)}
+.ulink:hover::after{transform-origin:left;animation:uline .8s var(--ease)}
+@keyframes uline{0%{transform:scaleX(1);transform-origin:right}49%{transform:scaleX(0);transform-origin:right}50%{transform-origin:left}100%{transform:scaleX(1);transform-origin:left}}
+
+/* ---------- Preloader ---------- */
+.preloader{position:fixed;inset:0;z-index:2000;background:var(--ivory);display:flex;flex-direction:column;justify-content:space-between;padding:var(--pad)}
+.preloader__top{display:flex;justify-content:space-between;font-size:var(--t-xs);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+.preloader__logo{position:absolute;left:50%;top:50%;width:110px;transform:translate(-50%,-50%)}
+.preloader__count{font-family:var(--f-display);font-weight:300;font-size:var(--t-mega);line-height:.8;color:var(--wine);font-variant-numeric:tabular-nums}
+.preloader__bar{height:2px;background:var(--line);margin-top:1.2rem;overflow:hidden}
+.preloader__bar span{display:block;height:100%;width:100%;background:var(--wine);transform:scaleX(0);transform-origin:left}
+.no-js .preloader,.reduce .preloader{display:none}
+
+/* ---------- Page transition ---------- */
+.curtain{position:fixed;inset:0;z-index:1900;pointer-events:none;display:grid;grid-template-columns:repeat(5,1fr)}
+.curtain span{background:var(--wine-3);transform:scaleY(0);transform-origin:bottom}
+.curtain__logo{position:fixed;left:50%;top:50%;width:90px;transform:translate(-50%,-50%);opacity:0;z-index:1901;pointer-events:none}
+
+/* ---------- Cursor ---------- */
+.cursor{position:fixed;left:0;top:0;z-index:1800;pointer-events:none;display:none}
+.has-cursor .cursor{display:block}
+.cursor__dot{position:fixed;width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:var(--wine)}
+.cursor__ring{position:fixed;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;border:1.5px solid rgba(123,28,46,.45);display:grid;place-items:center;transition:width .45s var(--ease),height .45s var(--ease),margin .45s var(--ease),background .45s,border-color .45s}
+.cursor__ring span{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:0;transition:opacity .3s}
+.cursor.is-hover .cursor__ring{width:68px;height:68px;margin:-34px 0 0 -34px;border-color:transparent;background:rgba(224,162,42,.25)}
+.cursor.is-label .cursor__ring{width:96px;height:96px;margin:-48px 0 0 -48px;background:var(--saffron);border-color:var(--saffron)}
+.cursor.is-label .cursor__ring span{opacity:1}
+.cursor.is-label .cursor__dot{opacity:0}
+.cursor.on-dark .cursor__dot{background:var(--saffron-2)}
+.cursor.on-dark .cursor__ring{border-color:rgba(242,198,106,.5)}
+
+/* ---------- Header ---------- */
+.hdr{position:fixed;inset:0 0 auto;z-index:500;height:var(--hh);transition:transform .6s var(--ease)}
+.hdr .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.hdr.is-hidden{transform:translateY(-110%)}
+.logo{display:flex;align-items:center;gap:.7rem}
+.logo img{width:50px;height:48px;object-fit:contain}
+.logo__t{display:flex;flex-direction:column;line-height:1.05}
+.logo__t b{font-family:var(--f-display);font-weight:500;font-size:1.12rem;letter-spacing:-.01em}
+.logo__t small{font-size:.6rem;font-weight:800;letter-spacing:.24em;color:var(--wine);text-transform:uppercase;margin-top:2px}
+.pillnav{display:none;position:relative;padding:.35rem;border-radius:999px;background:rgba(251,248,241,.72);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);box-shadow:0 0 0 1px var(--line),0 10px 30px -18px rgba(23,18,15,.35)}
+.pillnav ul{display:flex;position:relative;z-index:1}
+.pillnav a{display:block;padding:.55rem 1.05rem;border-radius:999px;font-size:.88rem;font-weight:600;color:var(--ink-2);transition:color .4s}
+.pillnav a:hover,.pillnav a[aria-current="page"]{color:var(--paper)}
+.pillnav__blob{position:absolute;top:.35rem;left:0;height:calc(100% - .7rem);border-radius:999px;background:var(--ink);z-index:0;transition:transform .55s var(--ease),width .55s var(--ease),opacity .3s;opacity:0}
+.hdr__r{display:flex;align-items:center;gap:.7rem}
+.hdr__cta{display:none}
+.burger{position:relative;width:52px;height:52px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;z-index:2}
+.burger i{position:absolute;width:18px;height:1.5px;background:currentColor;transition:transform .6s var(--ease)}
+.burger i:first-child{transform:translateY(-4px)}
+.burger i:last-child{transform:translateY(4px)}
+.menu-open .burger{background:var(--saffron);color:var(--ink)}
+.menu-open .burger i:first-child{transform:rotate(45deg)}
+.menu-open .burger i:last-child{transform:rotate(-45deg)}
+@media (min-width:1100px){.pillnav,.hdr__cta{display:block}.hdr__cta{display:inline-flex}.burger{display:none}}
+
+.menu{position:fixed;inset:0;z-index:450;background:var(--wine-3);color:var(--paper);display:flex;flex-direction:column;padding:calc(var(--hh) + 2rem) var(--pad) 2rem;clip-path:inset(0 0 100% 0);visibility:hidden;overflow-y:auto}
+.menu-open .menu{visibility:visible}
+.menu-open .hdr .logo__t b{color:var(--paper)}
+.menu-open .hdr .logo__t small{color:var(--saffron-2)}
+.menu__list li{overflow:hidden;border-bottom:1px solid var(--line-light)}
+.menu__list a{display:flex;align-items:baseline;gap:1rem;padding:.65rem 0;font-family:var(--f-display);font-size:clamp(2.2rem,1.5rem + 4vw,3.6rem);line-height:1.1;font-weight:300}
+.menu__list a small{font-family:var(--f-body);font-size:.75rem;font-weight:700;color:var(--saffron-2);letter-spacing:.1em}
+.menu__list a[aria-current="page"]{font-style:italic;color:var(--saffron-2)}
+.menu__foot{margin-top:auto;padding-top:2rem;display:grid;gap:.4rem;font-size:.9rem;color:rgba(251,248,241,.7)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;padding:calc(var(--hh) + 2.5rem) 0 0;background:var(--ivory);overflow:hidden;isolation:isolate;display:flex;flex-direction:column}
+#silk{position:absolute;inset:0;width:100%;height:100%;z-index:-2;opacity:.9}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 60% at 25% 45%,rgba(245,238,223,.92),rgba(245,238,223,.35) 70%,transparent);pointer-events:none}
+.hero__grid{flex:1;display:grid;gap:1rem;align-items:center;grid-template-columns:1fr}
+@media (min-width:1024px){.hero__grid{grid-template-columns:1.22fr .78fr}}
+.hero__ghost{position:absolute;right:-2vw;top:calc(var(--hh) + 1rem);z-index:-1;font-family:var(--f-display);font-weight:300;font-size:clamp(8rem,4rem + 18vw,22rem);line-height:.8;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.2px rgba(123,28,46,.16);pointer-events:none;user-select:none}
+.hero h1{font-size:clamp(2.5rem,1.3rem + 3.6vw,4.4rem);margin-bottom:1.5rem;letter-spacing:-.04em}
+.hero h1 em{color:var(--wine)}
+.hero__meta{display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
+.hero__meta .dot{width:8px;height:8px;border-radius:50%;background:var(--saffron);box-shadow:0 0 0 6px rgba(224,162,42,.2);animation:beat 2s infinite}
+@keyframes beat{50%{box-shadow:0 0 0 12px rgba(224,162,42,0)}}
+.hero__text{max-width:500px;margin-bottom:2.2rem}
+.hero__ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero__foot{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);margin-top:2.5rem}
+@media (min-width:768px){.hero__foot{grid-template-columns:repeat(4,1fr)}}
+.hero__foot div{padding:1.1rem 1rem 1.3rem 0;border-right:1px solid var(--line);font-size:.8rem;color:var(--ink-2)}
+.hero__foot div:last-child{border-right:0}
+.hero__foot strong{display:block;font-family:var(--f-display);font-weight:400;font-size:1.9rem;color:var(--ink);line-height:1.1}
+@media (max-width:767px){.hero__foot div:nth-child(2){border-right:0}.hero__foot div:nth-child(-n+2){border-bottom:1px solid var(--line)}.hero__foot div:nth-child(odd){padding-left:0}.hero__foot div:nth-child(even){padding-left:1rem}}
+@media (min-width:768px){.hero__foot div{padding-left:1.2rem}.hero__foot div:first-child{padding-left:0}}
+
+/* 3D carousel */
+.carousel{position:relative;height:clamp(380px,50vw,620px);perspective:1500px;perspective-origin:50% 35%;touch-action:pan-y;cursor:grab}
+.carousel:active{cursor:grabbing}
+.carousel__ring{position:absolute;left:50%;top:44%;width:0;height:0;transform-style:preserve-3d;will-change:transform}
+.carousel__item{position:absolute;left:0;top:0;width:var(--cw,170px);height:calc(var(--cw,170px) * 1.32);margin-left:calc(var(--cw,170px) / -2);margin-top:calc(var(--cw,170px) * -.66);transform-style:preserve-3d;backface-visibility:hidden}
+.carousel__item img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 22px 22px rgba(59,10,21,.25));transition:transform .6s var(--ease)}
+.carousel__item:hover img{transform:scale(1.06) translateY(-6px)}
+.carousel__floor{position:absolute;left:50%;top:76%;width:72%;height:90px;transform:translateX(-50%) rotateX(80deg);border-radius:50%;background:radial-gradient(closest-side,rgba(123,28,46,.28),transparent);filter:blur(4px)}
+.carousel__label{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);text-align:center;min-height:3.2rem}
+.carousel__label b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.4rem}
+.carousel__label small{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--wine)}
+.carousel__hint{position:absolute;right:0;bottom:6%;display:flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.carousel__seal{position:absolute;left:4%;top:8%;width:120px;height:120px;display:grid;place-items:center}
+.carousel__seal svg{position:absolute;inset:0;animation:spin 26s linear infinite}
+.carousel__seal img{width:58px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:640px){.carousel__seal{width:88px;height:88px;left:0}.carousel__seal img{width:42px}.carousel__hint{display:none}}
+
+/* ---------- Marquee (velocity) ---------- */
+.vmarquee{overflow:hidden;padding:1.4rem 0;border-block:1px solid var(--line);background:var(--paper)}
+.vmarquee__track{display:flex;width:max-content;will-change:transform}
+.vmarquee__item{display:flex;align-items:center;gap:2.5rem;padding-right:2.5rem;font-family:var(--f-display);font-weight:300;font-size:clamp(2rem,1.4rem + 3vw,4.4rem);line-height:1;white-space:nowrap}
+.vmarquee__item:nth-child(even){font-style:italic;color:var(--wine)}
+.vmarquee__item img{height:.9em;width:auto}
+.vmarquee--ink{background:var(--ink);color:var(--paper);border-color:transparent}
+.vmarquee--ink .vmarquee__item:nth-child(even){color:var(--saffron-2)}
+
+/* ---------- Manifesto (scroll text fill) ---------- */
+.manifesto{display:grid;gap:3rem;align-items:start}
+@media (min-width:1024px){.manifesto{grid-template-columns:.42fr 1fr;gap:5rem}}
+.manifesto__media{position:relative}
+@media (min-width:1024px){.manifesto__media{position:sticky;top:calc(var(--hh) + 2rem)}}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:999px 999px var(--r-lg) var(--r-lg);overflow:hidden;background:var(--ivory-2)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 25%;will-change:transform}
+.portrait__cap{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line)}
+.portrait__cap b{font-family:var(--f-display);font-weight:400;font-size:1.25rem}
+.portrait__cap span{font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--wine)}
+.fill-text{font-family:var(--f-display);font-weight:300;font-size:clamp(1.75rem,1.2rem + 2.3vw,3.5rem);line-height:1.18;letter-spacing:-.02em;margin:0 0 2.5rem}
+.fill-text .w{opacity:.14;transition:opacity .2s}
+.fill-text em{color:var(--wine)}
+.no-js .fill-text .w,.reduce .fill-text .w{opacity:1}
+.vm{display:grid;gap:0;border-top:1px solid var(--line)}
+@media (min-width:700px){.vm{grid-template-columns:1fr 1fr}}
+.vm__item{padding:1.6rem 1.6rem 1.6rem 0;border-bottom:1px solid var(--line)}
+@media (min-width:700px){.vm__item+.vm__item{padding-left:1.6rem;border-left:1px solid var(--line)}}
+.vm__item h3{font-size:1.5rem;display:flex;gap:.6rem;align-items:baseline}
+.vm__item h3 small{font-family:var(--f-body);font-size:.7rem;font-weight:800;color:var(--wine);letter-spacing:.1em}
+.vm__item p{color:var(--ink-2);margin:0;font-size:.95rem}
+
+/* ---------- Odometer numbers ---------- */
+.numbers{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line-light)}
+@media (min-width:640px){.numbers{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.numbers{grid-template-columns:repeat(5,1fr)}}
+.num{padding:2rem 1.4rem 2.2rem 0;border-bottom:1px solid var(--line-light);position:relative}
+@media (min-width:640px){.num{padding-left:1.4rem;border-right:1px solid var(--line-light)}.num:nth-child(2n){border-right:0}}
+@media (min-width:1100px){.num{border-bottom:0}.num:nth-child(2n){border-right:1px solid var(--line-light)}.num:last-child{border-right:0}.num:first-child{padding-left:0}}
+.num__idx{font-size:.7rem;font-weight:800;letter-spacing:.16em;color:var(--saffron-2)}
+.odo{display:flex;align-items:flex-start;font-family:var(--f-display);font-weight:300;font-size:clamp(3.4rem,2.4rem + 3.4vw,5.6rem);line-height:1;margin:1.2rem 0 .8rem;height:1em;overflow:hidden;font-variant-numeric:tabular-nums}
+.odo__col{display:flex;flex-direction:column;will-change:transform}
+.odo__col span{height:1em;display:block}
+.odo__plus{color:var(--saffron);font-size:.55em;margin-left:.08em}
+.num p{margin:0;color:rgba(251,248,241,.72);font-size:.92rem}
+.num p b{display:block;color:var(--paper);font-weight:700;font-size:1rem;margin-bottom:.15rem}
+
+/* ---------- Accordion categories ---------- */
+.accord{display:flex;gap:.8rem;height:clamp(460px,58vh,600px)}
+.acc{position:relative;flex:1;min-width:0;border-radius:var(--r-lg);overflow:hidden;background:var(--bg,var(--ivory-2));transition:flex .9s var(--ease);isolation:isolate;display:block}
+.acc.is-open{flex:4.2}
+.acc__vt{position:absolute;left:50%;bottom:1.6rem;transform:translateX(-50%) rotate(180deg);writing-mode:vertical-rl;font-family:var(--f-display);font-size:1.6rem;white-space:nowrap;transition:opacity .4s}
+.acc__num{position:absolute;top:1.3rem;left:50%;transform:translateX(-50%);font-size:.72rem;font-weight:800;letter-spacing:.12em;color:var(--wine);transition:left .9s var(--ease),transform .9s var(--ease)}
+.acc.is-open .acc__num{left:1.6rem;transform:none}
+.acc.is-open .acc__vt{opacity:0}
+.acc__body{position:absolute;inset:0;padding:1.6rem;display:grid;grid-template-rows:auto 1fr auto;opacity:0;transition:opacity .4s;pointer-events:none;min-width:380px}
+.acc.is-open .acc__body{opacity:1;transition:opacity .6s .35s;pointer-events:auto}
+.acc__body h3{font-size:clamp(1.8rem,1.4rem + 1.4vw,2.8rem);margin:2rem 0 .4rem;max-width:380px}
+.acc__body p{color:var(--ink-2);max-width:340px;font-size:.92rem;margin:0}
+.acc__packs{position:relative;display:flex;align-items:flex-end;justify-content:flex-end;gap:0;padding-right:.5rem}
+.acc__packs img{height:min(300px,100%);width:auto;max-width:42%;object-fit:contain;margin-left:-14%;filter:drop-shadow(0 20px 20px rgba(59,10,21,.25));transform:translateY(30px) rotate(var(--r,0deg));opacity:0;transition:transform 1s var(--ease),opacity .6s}
+.acc__packs img:nth-child(1){--r:-7deg}
+.acc__packs img:nth-child(3){--r:7deg}
+.acc.is-open .acc__packs img{transform:translateY(0) rotate(var(--r,0deg));opacity:1}
+.acc.is-open .acc__packs img:nth-child(2){transition-delay:.45s}
+.acc.is-open .acc__packs img:nth-child(1){transition-delay:.55s}
+.acc.is-open .acc__packs img:nth-child(3){transition-delay:.65s}
+.acc__go{display:inline-flex;align-items:center;gap:.6rem;font-weight:700;font-size:.9rem;align-self:end}
+.acc__go span{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);transition:transform .6s var(--ease),background .4s}
+.acc:hover .acc__go span{transform:rotate(-45deg);background:var(--wine)}
+@media (max-width:899px){
+  .accord{flex-direction:column;height:auto}
+  .acc,.acc.is-open{flex:none}
+  .acc__vt,.acc__num{display:none}
+  .acc__body{position:relative;opacity:1;pointer-events:auto;min-width:0;grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:1rem;align-items:center}
+  .acc__body h3{margin:0 0 .3rem;font-size:1.6rem}
+  .acc__packs{grid-row:1/3;grid-column:2;height:150px}
+  .acc__packs img{opacity:1;transform:rotate(var(--r,0deg));height:150px}
+  .acc__go{grid-column:1}
+}
+
+/* ---------- Journey (zig-zag horizontal timeline) ---------- */
+.journey{position:relative;color:var(--paper);overflow:hidden;isolation:isolate;
+  background:radial-gradient(80% 70% at 88% 8%,rgba(123,28,46,.6),transparent 62%),radial-gradient(60% 55% at 0% 100%,rgba(224,162,42,.13),transparent 60%),var(--ink)}
+.journey::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.6;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='%23F2C66A' fill-opacity='.06'%3E%3Cellipse cx='20' cy='24' rx='3' ry='8' transform='rotate(35 20 24)'/%3E%3Cellipse cx='96' cy='38' rx='3' ry='8' transform='rotate(-30 96 38)'/%3E%3Cellipse cx='58' cy='96' rx='3' ry='8' transform='rotate(70 58 96)'/%3E%3Cellipse cx='120' cy='112' rx='3' ry='8' transform='rotate(12 120 112)'/%3E%3C/g%3E%3C/svg%3E")}
+.journey__ghost{position:absolute;right:-1vw;bottom:-5vw;z-index:-1;font-family:var(--f-display);font-weight:300;font-size:clamp(10rem,6rem + 18vw,24rem);line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.2px rgba(242,198,106,.13);pointer-events:none;user-select:none;transition:opacity .35s}
+.journey__ghost.is-swap{opacity:0}
+.journey__pin{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:calc(var(--hh) + 1rem) 0 2rem}
+.journey .label{color:rgba(251,248,241,.7)}
+.journey .label b{color:var(--saffron-2)}
+.journey__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem 3rem}
+.journey__head h2{margin:.6rem 0 0;color:var(--paper)}
+.journey__head h2 em{color:var(--saffron-2)}
+.journey__count{display:flex;align-items:flex-end;gap:1.1rem}
+.yodo{display:flex;font-family:var(--f-display);font-weight:300;font-size:clamp(3.4rem,2.2rem + 3.6vw,6.2rem);line-height:1;height:1em;overflow:hidden;color:var(--saffron);letter-spacing:-.02em}
+.yodo{align-items:flex-start}
+.yodo span{display:flex;flex-direction:column;flex-shrink:0;height:10em;transition:transform 1s var(--ease)}
+.yodo span:nth-child(2){transition-delay:.05s}.yodo span:nth-child(3){transition-delay:.1s}.yodo span:nth-child(4){transition-delay:.15s}
+.yodo i{font-style:normal;display:block;height:1em;text-align:center}
+.journey__meta{display:grid;gap:.25rem;padding-bottom:.55rem;min-width:9.5rem}
+.journey__n{font-size:.7rem;font-weight:800;letter-spacing:.2em;color:rgba(251,248,241,.55)}
+.journey__era{font-family:var(--f-display);font-style:italic;font-weight:400;font-size:1.35rem;color:var(--saffron-2);line-height:1.1}
+.eras{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.4rem 0 clamp(1rem,2.5vh,2rem)}
+.eras button{padding:.45rem .95rem;border-radius:999px;border:1px solid var(--line-light);font-size:.8rem;font-weight:600;color:rgba(251,248,241,.72);transition:background .4s,color .4s,border-color .4s}
+.eras button b{font-weight:800;color:var(--saffron-2);margin-right:.2rem;transition:color .4s}
+.eras button:hover{border-color:var(--saffron);color:var(--paper)}
+.eras button[aria-current="true"]{background:var(--saffron);border-color:var(--saffron);color:var(--ink)}
+.eras button[aria-current="true"] b{color:var(--ink)}
+
+.jtrack{--cw:clamp(330px,26vw,400px);--ch:clamp(176px,23vh,218px);--gap:68px;position:relative;display:flex;width:max-content;height:calc(var(--ch) * 2 + var(--gap));padding-inline:max(var(--pad),calc((100vw - var(--wrap)) / 2));will-change:transform}
+.jline{position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:rgba(242,198,106,.16)}
+.jline i{position:absolute;inset:0;background:linear-gradient(90deg,rgba(242,198,106,.2),var(--saffron-2) 40%,var(--saffron));transform-origin:left;transform:scaleX(0);box-shadow:0 0 14px rgba(224,162,42,.55)}
+.jitem{position:relative;flex:0 0 var(--cw);height:100%;margin-right:calc(var(--cw) * -.38)}
+.jitem:last-child{margin-right:0}
+.jnode{position:absolute;left:2.4rem;top:50%;z-index:2;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:var(--ink);border:2px solid rgba(242,198,106,.4);transition:transform .5s var(--ease),border-color .4s,box-shadow .5s}
+.jnode::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--saffron);transform:scale(0);transition:transform .5s var(--ease)}
+.jstem{position:absolute;left:2.4rem;width:1px;height:calc(var(--gap) / 2 - 9px);background:rgba(242,198,106,.3);transition:background .4s}
+.jitem--top .jstem{top:var(--ch)}
+.jitem--bottom .jstem{bottom:var(--ch)}
+.jcard{position:absolute;left:0;right:0;height:var(--ch);display:grid;grid-template-columns:clamp(96px,7.5vw,120px) 1fr;gap:1.1rem;padding:1rem;border-radius:22px;
+  background:linear-gradient(160deg,rgba(251,248,241,.08),rgba(251,248,241,.02));border:1px solid rgba(251,248,241,.1);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  opacity:.45;transform:scale(.95);transition:opacity .55s,transform .7s var(--ease),border-color .5s,background .5s,box-shadow .6s}
+.jitem--top .jcard{top:0;transform-origin:30% 100%}
+.jitem--bottom .jcard{bottom:0;transform-origin:30% 0}
+.jcard__media{position:relative;height:100%;border-radius:16px;overflow:hidden;display:grid;place-items:center;padding:.55rem;background:radial-gradient(circle at 50% 58%,#FBF8F1 0%,#F2DFB0 62%,#E0A22A 140%)}
+.jcard__media img{max-height:100%;max-width:100%;width:auto;object-fit:contain;filter:drop-shadow(0 10px 10px rgba(59,10,21,.28));transition:transform .8s var(--ease)}
+.jcard__media--cover{padding:0}
+.jcard__media--cover img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;filter:none}
+.jcard__body{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.jcard__tag{font-size:.62rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron-2)}
+.jcard__y{font-family:var(--f-display);font-weight:300;font-size:clamp(2rem,1.6rem + 1vw,2.5rem);line-height:1;color:var(--paper);margin:.25rem 0 .35rem}
+.jcard h3{font-size:1.08rem;line-height:1.18;color:var(--paper);margin:0 0 .35rem;letter-spacing:-.01em}
+.jcard p{font-size:.8rem;line-height:1.5;color:rgba(251,248,241,.68);margin:0}
+.jitem.is-past .jnode{border-color:var(--saffron)}
+.jitem.is-past .jnode::after,.jitem.is-active .jnode::after{transform:scale(1)}
+.jitem.is-past .jstem,.jitem.is-active .jstem{background:var(--saffron)}
+.jitem.is-past .jcard{opacity:.62}
+.jitem.is-active .jnode{border-color:var(--saffron);transform:scale(1.3);box-shadow:0 0 0 7px rgba(224,162,42,.16),0 0 26px rgba(224,162,42,.55)}
+.jitem.is-active .jcard{opacity:1;transform:none;border-color:rgba(242,198,106,.55);background:linear-gradient(160deg,rgba(242,198,106,.16),rgba(251,248,241,.03));box-shadow:0 34px 60px -30px rgba(0,0,0,.75)}
+.jitem.is-active .jcard__media img{transform:scale(1.05)}
+.jcard:hover{opacity:1}
+.journey__hint{display:flex;align-items:center;gap:.8rem;margin:clamp(1rem,2.5vh,1.8rem) 0 0;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(251,248,241,.45)}
+.journey__hint span{width:42px;height:1px;background:var(--saffron);transform-origin:left;animation:hint 2.2s var(--ease) infinite}
+@keyframes hint{0%{transform:scaleX(.2)}50%{transform:scaleX(1)}100%{transform:scaleX(.2)}}
+
+/* stacked (mobile / reduced motion): vertical timeline */
+.journey.is-static .journey__pin{min-height:0;padding:var(--sec) 0}
+.journey.is-static .journey__count,.journey.is-static .eras,.journey.is-static .journey__hint{display:none}
+.journey.is-static .journey__ghost{font-size:40vw;bottom:auto;top:2rem;opacity:.6}
+.journey.is-static .jtrack{width:100%;max-width:calc(820px + var(--pad) * 2);height:auto;margin:2.5rem auto 0;flex-direction:column;gap:1rem;padding-inline:var(--pad)}
+.journey.is-static .jline{left:calc(var(--pad) + 1.1rem);right:auto;top:.5rem;bottom:.5rem;width:2px;height:auto;margin:0}
+.journey.is-static .jline i{transform:none;background:linear-gradient(180deg,var(--saffron),rgba(242,198,106,.25))}
+.journey.is-static .jitem{flex:none;height:auto;margin:0;padding-left:3rem}
+.journey.is-static .jnode{left:1.1rem;top:2rem;margin-left:-8px;border-color:var(--saffron)}
+.journey.is-static .jnode::after{transform:scale(1)}
+.journey.is-static .jstem{display:none}
+.journey.is-static .jcard{position:relative;height:auto;min-height:150px;opacity:1;transform:none;border-color:rgba(242,198,106,.25)}
+@media (max-width:520px){.journey.is-static .jcard{grid-template-columns:84px 1fr;gap:.9rem;padding:.8rem}.journey.is-static .jcard__media{height:110px}.jcard__y{font-size:1.8rem}}
+
+/* ---------- Clip reveal media ---------- */
+.clipmedia{position:relative;height:100vh;min-height:560px;overflow:hidden}
+.clipmedia__inner{position:absolute;inset:0;clip-path:inset(18% 22% 18% 22% round 40px);will-change:clip-path}
+.clipmedia__inner img{width:100%;height:100%;object-fit:cover;transform:scale(1.25);will-change:transform}
+.clipmedia__inner::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(23,18,15,.85),rgba(23,18,15,.15) 60%)}
+.clipmedia__text{position:absolute;left:0;right:0;bottom:clamp(2rem,1rem + 5vw,5rem);z-index:2;color:var(--paper)}
+.clipmedia__text h2{color:var(--paper);max-width:900px}
+.clipmedia__chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.clipmedia__chips span{padding:.5rem 1rem;border-radius:999px;border:1px solid rgba(251,248,241,.35);backdrop-filter:blur(8px);font-size:.82rem;font-weight:600}
+.no-js .clipmedia__inner,.reduce .clipmedia__inner{clip-path:none}
+
+/* ---------- Stacking cards ---------- */
+.stack{position:relative}
+.scard{position:sticky;top:calc(var(--hh) + 1.5rem + var(--i) * 18px);margin-bottom:2rem;border-radius:var(--r-xl);padding:clamp(1.6rem,1rem + 3vw,3.4rem);background:var(--bg);color:var(--fg,var(--ink));display:grid;gap:2rem;align-items:center;min-height:clamp(360px,52vh,480px);transform-origin:center top;box-shadow:0 -20px 40px -30px rgba(23,18,15,.35);will-change:transform}
+@media (min-width:900px){.scard{grid-template-columns:1fr 1fr}}
+.scard__n{font-family:var(--f-display);font-weight:300;font-size:clamp(4.5rem,3rem + 5vw,8rem);line-height:.85;opacity:.9}
+.scard h3{font-size:var(--t-h3);color:inherit}
+.scard p{max-width:440px;opacity:.82;margin:0}
+.scard__ico{justify-self:end;width:clamp(150px,18vw,240px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;border:1px solid currentColor;opacity:.9;position:relative}
+.scard__ico::before{content:"";position:absolute;inset:12px;border-radius:50%;border:1px dashed currentColor;opacity:.4;animation:spin 30s linear infinite}
+.scard__ico svg{width:38%;height:38%}
+@media (max-width:899px){.scard__ico{justify-self:start;width:110px}}
+
+/* ---------- Flip cards ---------- */
+.fgrid{display:grid;gap:clamp(.8rem,.5rem + 1vw,1.4rem);grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:768px){.fgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1100px){.fgrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.flip{position:relative;aspect-ratio:3/4;perspective:1200px}
+.flip__in{position:absolute;inset:0;transform-style:preserve-3d;transition:transform 1s var(--ease)}
+.flip:hover .flip__in,.flip.is-flipped .flip__in,.flip:focus-within .flip__in{transform:rotateY(180deg)}
+.flip__f,.flip__b{position:absolute;inset:0;border-radius:var(--r-lg);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
+.flip__f{background:var(--ivory);display:grid;grid-template-rows:1fr auto;padding:1.2rem 1.2rem 1rem}
+.flip__f img{width:100%;height:100%;object-fit:contain;min-height:0;filter:drop-shadow(0 16px 16px rgba(59,10,21,.2))}
+.flip__f figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;padding-top:.8rem;border-top:1px solid var(--line);margin-top:.8rem}
+.flip__f figcaption b{font-family:var(--f-display);font-weight:400;font-size:1.12rem;line-height:1.15}
+.flip__f figcaption small{font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--wine);white-space:nowrap}
+.flip__b{transform:rotateY(180deg);background:var(--wine-2);color:var(--paper);padding:1.4rem;display:flex;flex-direction:column}
+.flip__b::before{content:"";position:absolute;right:-30%;bottom:-20%;width:90%;aspect-ratio:1;background:var(--img) center/contain no-repeat;opacity:.18;transform:rotate(-12deg)}
+.flip__b small{font-size:.65rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--saffron-2)}
+.flip__b h3{font-size:clamp(1.3rem,1.1rem + .8vw,1.8rem);color:var(--paper);margin:.5rem 0 1rem}
+.flip__b ul{display:flex;flex-wrap:wrap;gap:.35rem;position:relative}
+.flip__b li{padding:.25rem .6rem;border-radius:999px;border:1px solid rgba(251,248,241,.3);font-size:.74rem;font-weight:700}
+.flip__b .btn{margin-top:auto;min-height:46px;font-size:.82rem;padding:0 .6rem 0 1.1rem;align-self:flex-start;position:relative}
+.flip__b .btn .btn__ico{width:30px;height:30px}
+.flip__tap{position:absolute;right:.8rem;top:.8rem;z-index:3;width:34px;height:34px;border-radius:50%;display:none;place-items:center;background:var(--paper);color:var(--ink);box-shadow:0 4px 12px rgba(0,0,0,.12)}
+@media (hover:none){.flip:hover .flip__in{transform:none}.flip.is-flipped .flip__in{transform:rotateY(180deg)}.flip__tap{display:grid}}
+@media (max-width:520px){.flip__f{padding:.8rem}.flip__f figcaption{flex-direction:column;gap:.15rem}.flip__f figcaption b{font-size:.98rem}.flip__b{padding:1rem}.flip__b li{font-size:.66rem}}
+.flip.is-hidden{display:none}
+
+/* filters */
+.filters{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between;padding:1.2rem 0;margin-bottom:2rem;border-block:1px solid var(--line);position:sticky;top:0;z-index:40;background:rgba(251,248,241,.92);backdrop-filter:blur(12px)}
+.ftabs{display:flex;gap:.3rem;overflow-x:auto;scrollbar-width:none;max-width:100%;padding:2px}
+.ftabs::-webkit-scrollbar{display:none}
+.ftab{flex-shrink:0;padding:.55rem 1rem;border-radius:999px;font-weight:700;font-size:.85rem;color:var(--ink-2);transition:background .4s,color .4s}
+.ftab sup{font-size:.62rem;color:var(--wine);margin-left:.2rem}
+.ftab:hover{background:var(--ivory)}
+.ftab[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.ftab[aria-pressed="true"] sup{color:var(--saffron-2)}
+.fsearch{position:relative;flex:1 1 220px;max-width:320px}
+.fsearch input{width:100%;min-height:46px;border:0;border-bottom:1.5px solid var(--line-2);background:transparent;padding:.5rem 0 .5rem 1.8rem;border-radius:0}
+.fsearch input:focus{outline:none;border-color:var(--wine)}
+.fsearch svg{position:absolute;left:0;top:50%;transform:translateY(-50%);color:var(--ink-3)}
+.fcount{font-size:.8rem;color:var(--ink-3);font-weight:600;margin-bottom:1.2rem}
+@media (max-width:767px){.filters{flex-direction:column;align-items:stretch;gap:.6rem;padding:.8rem 0}.fsearch{max-width:none;flex:0 0 auto}}
+
+/* ---------- Leadership hover list ---------- */
+.people{border-top:1px solid var(--line)}
+.person{position:relative;display:grid;gap:.4rem 2rem;padding:1.6rem 0;border-bottom:1px solid var(--line);align-items:center;transition:padding .6s var(--ease)}
+@media (min-width:900px){.person{grid-template-columns:3rem 1.1fr 1fr 1.2fr}}
+.person__i{font-size:.75rem;font-weight:800;color:var(--wine);letter-spacing:.1em}
+.person h3{font-size:clamp(1.5rem,1.2rem + 1.2vw,2.3rem);margin:0;transition:transform .6s var(--ease),color .4s}
+.person__role{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.person p{margin:0;font-size:.88rem;color:var(--ink-3)}
+.person::before{content:"";position:absolute;inset:0;background:var(--ivory);transform:scaleY(0);transform-origin:bottom;transition:transform .6s var(--ease);z-index:-1}
+.person:hover::before{transform:scaleY(1)}
+.person:hover h3{transform:translateX(12px);color:var(--wine)}
+.person__img{display:none}
+.people-float{position:fixed;left:0;top:0;width:240px;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;pointer-events:none;z-index:300;opacity:0;transform:scale(.6);transition:opacity .35s,transform .5s var(--ease);background:var(--ivory-2);box-shadow:0 30px 60px -20px rgba(23,18,15,.45)}
+.people-float.is-on{opacity:1;transform:scale(1)}
+.people-float img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;opacity:0;transition:opacity .35s}
+.people-float img.is-on{opacity:1}
+@media (max-width:899px),(hover:none){.person{grid-template-columns:84px 1fr;align-items:start}.person__i{display:none}.person__img{display:block;grid-row:1/4;width:84px;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--ivory-2)}.person__img img{width:100%;height:100%;object-fit:cover;object-position:center 15%}.person p{grid-column:2}.people-float{display:none}}
+
+/* ---------- Ecosystem accordion (details) ---------- */
+.eco{border-top:1px solid var(--line-light)}
+.eco details{border-bottom:1px solid var(--line-light)}
+.eco summary{list-style:none;display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem;align-items:center;padding:1.8rem 0;cursor:pointer}
+.eco summary::-webkit-details-marker{display:none}
+.eco summary small{font-size:.72rem;font-weight:800;letter-spacing:.14em;color:var(--saffron-2);text-transform:uppercase;min-width:9rem}
+.eco summary h3{font-size:clamp(1.4rem,1.1rem + 1.4vw,2.4rem);margin:0;color:var(--paper);transition:transform .6s var(--ease)}
+.eco summary:hover h3{transform:translateX(10px)}
+.eco summary i{width:48px;height:48px;border-radius:50%;border:1px solid var(--line-light);display:grid;place-items:center;transition:transform .6s var(--ease),background .4s,color .4s}
+.eco details[open] summary i{transform:rotate(45deg);background:var(--saffron);color:var(--ink);border-color:var(--saffron)}
+.eco__grid{display:grid;gap:1rem;padding:0 0 2rem;grid-template-columns:1fr}
+@media (min-width:768px){.eco__grid{grid-template-columns:repeat(var(--n,2),1fr)}}
+.eco__ent{padding:1.4rem;border-radius:var(--r);background:rgba(251,248,241,.05);border:1px solid var(--line-light)}
+.eco__ent b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.2rem;margin-bottom:.4rem;color:var(--saffron-2)}
+.eco__ent span{font-size:.88rem;color:rgba(251,248,241,.72)}
+@media (max-width:640px){.eco summary{grid-template-columns:1fr auto}.eco summary small{grid-column:1/-1;min-width:0}}
+
+/* ---------- Generic cards / splits ---------- */
+.split{display:grid;gap:clamp(2rem,1rem + 4vw,5rem);align-items:center}
+@media (min-width:960px){.split{grid-template-columns:1fr 1fr}.split--l{grid-template-columns:1.2fr .8fr}.split--r{grid-template-columns:.8fr 1.2fr}}
+.media{position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--ivory-2)}
+.media img{width:100%;height:100%;object-fit:cover;will-change:transform}
+.media--tall{aspect-ratio:4/5}
+.media--wide{aspect-ratio:4/3}
+.media--arch{border-radius:999px 999px var(--r-lg) var(--r-lg)}
+.media--circle{border-radius:50%;aspect-ratio:1}
+.list-lines li{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line);color:var(--ink-2)}
+.list-lines li::before{content:"";flex-shrink:0;width:8px;height:8px;margin-top:.55rem;border-radius:50%;background:var(--saffron)}
+.sec--ink .list-lines li,.sec--wine .list-lines li{border-color:var(--line-light);color:rgba(251,248,241,.78)}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem}
+.tags li,.tags span{padding:.4rem .9rem;border-radius:999px;border:1px solid var(--line-2);font-size:.82rem;font-weight:600;transition:background .4s,color .4s}
+.tags li:hover,.tags span:hover{background:var(--ink);color:var(--paper)}
+.sec--ink .tags span,.sec--wine .tags span{border-color:var(--line-light)}
+.sec--ink .tags span:hover,.sec--wine .tags span:hover{background:var(--saffron);color:var(--ink)}
+.cards3{display:grid;gap:1.2rem;grid-template-columns:1fr}
+@media (min-width:768px){.cards3{grid-template-columns:repeat(3,1fr)}}
+.icard{padding:2rem;border-radius:var(--r-lg);background:var(--paper);border:1px solid var(--line);transition:transform .7s var(--ease),background .5s,color .5s;position:relative;overflow:hidden}
+.icard:hover{transform:translateY(-8px);background:var(--ink);color:var(--paper)}
+.icard:hover p{color:rgba(251,248,241,.72)}
+.icard:hover h3{color:var(--paper)}
+.icard__n{font-family:var(--f-display);font-style:italic;color:var(--wine);font-size:1.1rem}
+.icard:hover .icard__n{color:var(--saffron-2)}
+.icard h3{font-size:1.6rem;margin:.8rem 0 .6rem}
+.icard p{margin:0;font-size:.93rem;color:var(--ink-2);transition:color .5s}
+.icard__ico{position:absolute;right:1.6rem;top:1.6rem;opacity:.25;transition:transform .8s var(--ease),opacity .5s}
+.icard:hover .icard__ico{transform:rotate(-20deg) scale(1.2);opacity:.6}
+
+/* features row */
+.frow{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+@media (min-width:900px){.frow{grid-template-columns:repeat(5,1fr)}}
+.frow div{padding:1.6rem 1rem 1.6rem 0;border-bottom:1px solid var(--line)}
+@media (min-width:900px){.frow div{padding-left:1.2rem;border-left:1px solid var(--line);border-bottom:0}.frow div:first-child{border-left:0;padding-left:0}}
+.frow strong{display:block;font-family:var(--f-display);font-weight:400;font-size:1.5rem;line-height:1.1;margin:.6rem 0 .2rem}
+.frow span{font-size:.82rem;color:var(--ink-3)}
+.frow svg{color:var(--wine)}
+.sec--ink .frow,.sec--ink .frow div{border-color:var(--line-light)}
+.sec--ink .frow svg{color:var(--saffron-2)}
+.sec--ink .frow span{color:rgba(251,248,241,.6)}
+
+/* chart */
+.chart{padding-top:2rem}
+.chart__bars{display:flex;align-items:flex-end;gap:clamp(4px,1.2vw,18px);height:360px;border-bottom:1px solid var(--line-2)}
+.bar{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:.5rem}
+.bar i{display:block;width:100%;height:var(--h);background:var(--ink);border-radius:999px 999px 0 0;transform:scaleY(0);transform-origin:bottom}
+.bar--p i{background:repeating-linear-gradient(135deg,var(--saffron) 0 6px,var(--saffron-2) 6px 12px)}
+.bar b{font-size:.68rem;font-weight:800;color:var(--ink-2);white-space:nowrap;opacity:0}
+.chart__x{display:flex;gap:clamp(4px,1.2vw,18px);margin-top:.7rem}
+.chart__x span{flex:1;text-align:center;font-size:.68rem;font-weight:700;color:var(--ink-3)}
+.chart__lg{display:flex;gap:1.5rem;margin-top:1.3rem;font-size:.82rem;font-weight:600;color:var(--ink-2)}
+.chart__lg i{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--ink);margin-right:.4rem;vertical-align:-1px}
+.chart__lg i.p{background:var(--saffron)}
+@media (max-width:767px){.chart__bars{height:240px}.bar b{display:none}.chart__x span{writing-mode:vertical-rl;transform:rotate(180deg);height:58px;font-size:.6rem}}
+.reduce .bar i,.no-js .bar i{transform:none}.reduce .bar b,.no-js .bar b{opacity:1}
+
+/* states / map */
+.states{display:grid;gap:0;border-top:1px solid var(--line)}
+.st{border-bottom:1px solid var(--line)}
+.st summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.2rem 0;cursor:pointer;font-family:var(--f-display);font-size:1.5rem}
+.st summary::-webkit-details-marker{display:none}
+.st summary span{display:flex;align-items:center;gap:1rem;font-family:var(--f-body);font-size:.8rem;font-weight:700;color:var(--ink-3)}
+.st summary i{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--ivory);transition:transform .5s var(--ease),background .4s}
+.st[open] summary i{transform:rotate(45deg);background:var(--saffron)}
+.st .tags{padding-bottom:1.4rem}
+.st .tags span{font-size:.76rem;padding:.3rem .7rem}
+
+/* logo walls */
+.lwall{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+@media (min-width:640px){.lwall{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1024px){.lwall{grid-template-columns:repeat(5,1fr)}}
+.lwall div{aspect-ratio:3/2;display:grid;place-items:center;padding:1.2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden;background:var(--paper)}
+.lwall div::before{content:"";position:absolute;inset:0;background:var(--ivory);transform:translateY(101%);transition:transform .6s var(--ease)}
+.lwall div:hover::before{transform:none}
+.lwall img{position:relative;max-height:68px;max-width:80%;width:auto;object-fit:contain;filter:grayscale(1);opacity:.8;transition:filter .5s,opacity .5s,transform .6s var(--ease)}
+.lwall div:hover img{filter:none;opacity:1;transform:scale(1.08)}
+.lwall .ph{padding:0}
+.lwall .ph img{max-height:none;max-width:none;width:100%;height:100%;object-fit:cover;object-position:center 75%;filter:grayscale(.6);opacity:1}
+.ctabs{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:2rem}
+.ctabs button{padding:.6rem 1.1rem;border-radius:999px;font-weight:700;font-size:.88rem;color:var(--ink-2);transition:background .4s,color .4s}
+.ctabs button:hover{background:var(--ivory)}
+.ctabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+[role="tabpanel"][hidden]{display:none}
+
+/* ranges */
+.range{display:grid;gap:2rem;padding:clamp(1.5rem,1rem + 2vw,3rem) 0;border-top:1px solid var(--line)}
+@media (min-width:960px){.range{grid-template-columns:.75fr 1.25fr;gap:4rem}}
+.range h3{font-size:var(--t-h3)}
+.range__packs{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:.6rem}
+.range__packs figure{margin:0;aspect-ratio:3/4;border-radius:var(--r);background:var(--ivory);display:grid;place-items:center;padding:.5rem;transition:transform .6s var(--ease),background .4s}
+.range__packs figure:hover{transform:translateY(-10px) rotate(-3deg);background:var(--sand)}
+.range__packs img{max-height:100%;width:auto;object-fit:contain}
+
+/* drawer */
+.drawer{position:fixed;inset:0;z-index:1500;visibility:hidden;pointer-events:none}
+.drawer.is-open{visibility:visible;pointer-events:auto}
+.drawer__bg{position:absolute;inset:0;background:rgba(23,18,15,.5);opacity:0;transition:opacity .5s}
+.drawer.is-open .drawer__bg{opacity:1}
+.drawer__panel{position:absolute;right:0;top:0;bottom:0;width:min(560px,100%);background:var(--paper);overflow-y:auto;transform:translateX(100%);transition:transform .8s var(--ease);display:flex;flex-direction:column}
+.drawer.is-open .drawer__panel{transform:none}
+.drawer__media{background:var(--ivory);padding:2.5rem 2rem 1.5rem;display:grid;place-items:center;position:relative}
+.drawer__media img{max-height:260px;width:auto;filter:drop-shadow(0 20px 20px rgba(59,10,21,.25))}
+.drawer__x{position:absolute;right:1rem;top:1rem;width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;transition:transform .5s var(--ease)}
+.drawer__x:hover{transform:rotate(90deg)}
+.drawer__body{padding:2rem}
+.drawer__body h2{font-size:2.2rem;margin:.4rem 0 1rem}
+.picks{display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0 1.4rem}
+.picks label{position:relative}
+.picks input{position:absolute;opacity:0}
+.picks span{display:inline-block;padding:.4rem .9rem;border-radius:999px;border:1.5px solid var(--line-2);font-size:.82rem;font-weight:700;cursor:pointer;transition:all .3s}
+.picks input:checked+span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.picks input:focus-visible+span{outline:2px solid var(--saffron);outline-offset:2px}
+
+/* forms */
+.form{display:grid;gap:1.4rem}
+.form__2{display:grid;gap:1.4rem}
+@media (min-width:640px){.form__2{grid-template-columns:1fr 1fr}}
+.fld{position:relative;display:grid}
+.fld label{font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.3rem}
+.fld input,.fld select,.fld textarea{width:100%;min-height:48px;border:0;border-bottom:1.5px solid var(--line-2);background:transparent;padding:.5rem 0;border-radius:0;transition:border-color .4s}
+.fld textarea{min-height:110px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--wine)}
+.fld::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--wine);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.fld:focus-within::after{transform:scaleX(1)}
+.form__ok{display:none;padding:1rem;border-radius:12px;background:#EEF4E4;color:#3B4F1C;font-weight:600;font-size:.9rem}
+.form__ok.is-on{display:block}
+
+/* offices */
+.offices{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line)}
+@media (min-width:768px){.offices{grid-template-columns:1fr 1fr}}
+.office{padding:2rem 2rem 2rem 0;border-bottom:1px solid var(--line)}
+@media (min-width:768px){.office:nth-child(even){padding-left:2rem;border-left:1px solid var(--line)}}
+.office h3{font-size:1.45rem}
+.office p,.office a{font-size:.92rem;color:var(--ink-2)}
+.office a{display:block;transition:color .3s}
+.office a:hover{color:var(--wine)}
+
+/* page hero */
+.phero{position:relative;padding:calc(var(--hh) + clamp(4rem,3rem + 5vw,8rem)) 0 clamp(3rem,2rem + 3vw,5rem);background:var(--ivory);overflow:hidden}
+.phero__grid{display:grid;gap:2rem;align-items:end}
+@media (min-width:960px){.phero__grid{grid-template-columns:1.3fr .7fr}}
+.phero h1{font-size:clamp(3rem,1.8rem + 5vw,7.2rem);margin:1.2rem 0 0;letter-spacing:-.04em}
+.phero h1 em{color:var(--wine)}
+.phero p{margin:0;max-width:440px}
+.phero__media{margin-top:clamp(2.5rem,2rem + 3vw,5rem);height:clamp(260px,46vw,620px);border-radius:var(--r-xl);overflow:hidden;position:relative}
+.phero__media img{width:100%;height:120%;object-fit:cover;will-change:transform}
+.crumb{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.crumb a:hover{color:var(--wine)}
+
+/* sacred */
+.sacred{text-align:center}
+.sacred__l{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 2rem;font-size:clamp(1.1rem,1rem + .7vw,1.6rem);color:var(--wine);margin-bottom:2rem}
+
+/* ---------- Footer ---------- */
+.ftr{background:var(--ink);color:rgba(251,248,241,.7);padding-top:var(--sec);position:relative}
+.ftr__cta{display:grid;gap:2rem;align-items:end;padding-bottom:clamp(3rem,2rem + 3vw,5rem);border-bottom:1px solid var(--line-light)}
+@media (min-width:900px){.ftr__cta{grid-template-columns:1.4fr .6fr}}
+.ftr__cta h2{color:var(--paper);font-size:var(--t-h2);margin:0}
+.ftr__cta h2 em{color:var(--saffron-2)}
+.ftr__cta-r{display:flex;justify-content:flex-start}
+@media (min-width:900px){.ftr__cta-r{justify-content:flex-end}}
+.bigcircle{width:170px;height:170px;border-radius:50%;background:var(--saffron);color:var(--ink);display:grid;place-items:center;text-align:center;font-weight:800;font-size:.85rem;letter-spacing:.06em;line-height:1.3;transition:background .4s}
+.bigcircle:hover{background:var(--paper)}
+.bigcircle svg{margin:.4rem auto 0}
+.ftr__grid{display:grid;gap:2.5rem;padding:clamp(3rem,2rem + 3vw,4.5rem) 0;grid-template-columns:1fr 1fr}
+@media (min-width:1024px){.ftr__grid{grid-template-columns:1.4fr 1fr 1fr 1.3fr}}
+.ftr__grid>div:first-child{grid-column:1/-1}
+@media (min-width:1024px){.ftr__grid>div:first-child{grid-column:auto}}
+.ftr h4{font-family:var(--f-body);font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--saffron-2);margin-bottom:1.1rem}
+.ftr li{margin-bottom:.5rem;font-size:.92rem}
+.ftr a:hover{color:var(--paper)}
+.ftr__word{font-family:var(--f-display);font-weight:300;font-size:clamp(2rem,10.4vw,12.5rem);line-height:.82;letter-spacing:-.05em;color:var(--paper);white-space:nowrap;padding-bottom:1rem;text-align:center}
+.ftr__word em{color:var(--saffron)}
+.ftr__word .char{transform:translateY(100%)}
+.reduce .ftr__word .char,.no-js .ftr__word .char{transform:none}
+.ftr__word-wrap{overflow:hidden}
+.ftr__bar{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;padding:1.4rem 0 2rem;border-top:1px solid var(--line-light);font-size:.78rem}
+.ftr__langs{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;color:rgba(242,198,106,.6);font-size:.9rem}
+
+/* reveal fallback states (JS sets initial via GSAP) */
+.no-js [data-r],.reduce [data-r]{opacity:1!important;transform:none!important}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+.scrolled .hdr{background:rgba(251,248,241,.82);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);box-shadow:0 1px 0 var(--line)}
+.scrolled .hdr .pillnav{box-shadow:0 0 0 1px var(--line)}
+.menu-open .hdr{background:transparent!important;box-shadow:none!important;backdrop-filter:none!important}
+
+</style>
+<script>try{if(sessionStorage.getItem('sbl-nav')){document.documentElement.classList.add('from-nav');sessionStorage.removeItem('sbl-nav');}if(sessionStorage.getItem('sbl-visited'))document.documentElement.classList.add('visited')}catch(e){}</script>
+<style>.from-nav .curtain span{transform:scaleY(1)}.from-nav .curtain__logo{opacity:1}.visited .preloader{display:none}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="preloader" aria-hidden="true">
+  <div class="preloader__top"><span>Sri Bhagyalakshmi Foods</span><span>Since 1972</span></div>
+  <img class="preloader__logo" src="assets/img/photos/logo.webp" alt="" width="110" height="105">
+  <div><div class="preloader__count">0</div><div class="preloader__bar"><span></span></div></div>
+</div>
+<div class="curtain" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+<img class="curtain__logo" src="assets/img/photos/logo.webp" alt="" aria-hidden="true" width="90" height="86">
+<div class="cursor" aria-hidden="true"><div class="cursor__ring"><span></span></div><div class="cursor__dot"></div></div>
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Sri Bhagyalakshmi Foods home"><img src="assets/img/photos/logo.webp" alt="" width="50" height="48"><span class="logo__t"><b>Sri Bhagyalakshmi</b><small>Foods · Est. 1972</small></span></a>
+    <nav class="pillnav" aria-label="Primary"><span class="pillnav__blob" aria-hidden="true"></span><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="operations.html">Operations</a></li><li><a href="markets.html">Markets</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    <div class="hdr__r">
+      <a class="btn magnetic hdr__cta" href="contact.html">Enquire<span class="btn__ico"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<div class="menu" id="menu" aria-hidden="true">
+  <ul class="menu__list"><li><a href="index.html" aria-current="page"><small>01</small>Home</a></li><li><a href="about.html"><small>02</small>About</a></li><li><a href="products.html"><small>03</small>Products</a></li><li><a href="operations.html"><small>04</small>Operations</a></li><li><a href="markets.html"><small>05</small>Markets</a></li><li><a href="contact.html"><small>06</small>Contact</a></li></ul>
+  <div class="menu__foot"><span>+91-80-26741561</span><span>sbaf@sblfoods.com</span><span>#321/A, Opp. BHEL, Mysore Road, Bengaluru</span></div>
+</div>
+<main id="main">
+
+<section class="hero" aria-label="Introduction">
+  <canvas id="silk" aria-hidden="true"></canvas>
+  <div class="hero__ghost" aria-hidden="true">1972</div>
+  <div class="wrap hero__grid">
+    <div>
+      <div class="hero__meta" data-hero><span class="dot"></span><span class="label"><b>Est. 1972</b> · Bengaluru, India</span></div>
+      <h1><span class="split-line"><span>Rooted in <em>Tradition.</em></span></span><span class="split-line"><span>Driven by Quality.</span></span><span class="split-line"><span>Nourishing <em>Generations.</em></span></span></h1>
+      <p class="lead hero__text" data-hero>Over 50 years of food processing excellence, bringing quality, consistency and trust to homes and businesses.</p>
+      <div class="hero__ctas" data-hero><a class="btn magnetic " href="products.html">Explore products<span class="btn__ico"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="btn magnetic btn--line" href="about.html">Our story<span class="btn__ico"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+    </div>
+    <div class="carousel" aria-label="Rotating showcase of SBL product packs. Drag or use arrow keys to rotate." data-cursor="Drag">
+      <div class="carousel__seal"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="sealPath48" d="M60,60 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"/></defs><text font-family="Manrope,sans-serif" font-size="9.2" font-weight="800" letter-spacing="3.1" fill="#7B1C2E"><textPath href="#sealPath48">• TESTED • TASTED • TRUSTED </textPath></text></svg><img src="assets/img/photos/logo.webp" alt="" width="58" height="56"></div>
+      <div class="carousel__floor" aria-hidden="true"></div>
+      <div class="carousel__ring"><div class="carousel__item" data-name="Toor Dal" data-cat="Dals &amp; Pulses"><img src="assets/img/products/toor-dal.webp" alt="Toor Dal" width="330" height="458" draggable="false"></div><div class="carousel__item" data-name="Chakki Atta" data-cat="Flours &amp; Rice Flakes"><img src="assets/img/products/chakki-atta.webp" alt="Chakki Atta" width="300" height="417" draggable="false"></div><div class="carousel__item" data-name="Bansi Suji" data-cat="Suji &amp; Semolina"><img src="assets/img/products/bansi-suji.webp" alt="Bansi Suji" width="331" height="458" draggable="false"></div><div class="carousel__item" data-name="BTC Gold Sona Masuri" data-cat="Rice"><img src="assets/img/products/btc-gold-sona-masuri.webp" alt="BTC Gold Sona Masuri" width="265" height="369" draggable="false"></div><div class="carousel__item" data-name="Rice Flakes" data-cat="Flours &amp; Rice Flakes"><img src="assets/img/products/rice-flakes.webp" alt="Rice Flakes" width="331" height="458" draggable="false"></div><div class="carousel__item" data-name="Bengal Gram" data-cat="Dals &amp; Pulses"><img src="assets/img/products/bengal-gram.webp" alt="Bengal Gram" width="330" height="458" draggable="false"></div><div class="carousel__item" data-name="Maida" data-cat="Flours &amp; Rice Flakes"><img src="assets/img/products/maida.webp" alt="Maida" width="300" height="417" draggable="false"></div><div class="carousel__item" data-name="Idli Suji" data-cat="Suji &amp; Semolina"><img src="assets/img/products/idli-suji.webp" alt="Idli Suji" width="273" height="331" draggable="false"></div><div class="carousel__item" data-name="Ragi Flour" data-cat="Flours &amp; Rice Flakes"><img src="assets/img/products/ragi-flour.webp" alt="Ragi Flour" width="300" height="417" draggable="false"></div><div class="carousel__item" data-name="Masoor Dal" data-cat="Dals &amp; Pulses"><img src="assets/img/products/masoor-dal.webp" alt="Masoor Dal" width="331" height="458" draggable="false"></div><div class="carousel__item" data-name="Star Sona Masuri" data-cat="Rice"><img src="assets/img/products/star-sona-masuri.webp" alt="Star Sona Masuri" width="265" height="370" draggable="false"></div><div class="carousel__item" data-name="Chiroti Suji" data-cat="Suji &amp; Semolina"><img src="assets/img/products/chiroti-suji.webp" alt="Chiroti Suji" width="188" height="227" draggable="false"></div></div>
+      <div class="carousel__label" aria-live="off"><b>Toor Dal</b><small>Dals &amp; Pulses</small></div>
+      <div class="carousel__hint" aria-hidden="true"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg> Drag <svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></div>
+    </div>
+  </div>
+  <div class="wrap"><div class="hero__foot" data-hero>
+    <div><strong>4</strong>GMP-certified plants</div><div><strong>8,000+</strong>Farmers sourced directly</div><div><strong>100–150</strong>Owned cargo vehicles</div><div><strong>7</strong>Export geographies</div>
+  </div></div>
+</section>
+
+<div class="vmarquee" aria-hidden="true"><div class="vmarquee__track"><span class="vmarquee__item">Cereals<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Pulses<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Flour<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Rice<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Suji<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Spices<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Millets<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Sweets<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span></div></div>
+
+<section class="sec" aria-labelledby="man-t">
+  <div class="wrap manifesto">
+    <div class="manifesto__media">
+      <div class="portrait" data-r-img><img src="assets/img/photos/founder.webp" alt="Shri B. S. Amaranarayana Gupta, Founder" width="413" height="410" loading="lazy"></div>
+      <div class="portrait__cap" data-r><b>B. S. Amaranarayana Gupta</b><span>Founder</span></div>
+    </div>
+    <div>
+      <span class="label" data-r><b>(01)</b> Founder’s legacy</span>
+      <h2 class="sr-only" id="man-t">A vision that nourishes generations</h2>
+      <p class="fill-text" style="margin-top:1.5rem">When food processing in India was still in its early stages, our founder envisioned a future where <em>quality, consistency and trust</em> would form the foundation of the Indian food industry. What began as a small venture is now a brand with over 110 trusted products — favoured in every third household in South India.</p>
+      <div class="vm">
+        <div class="vm__item" data-r><h3><small>VISION</small> Most trusted</h3><p>To become one of India’s most trusted and respected food brands, offering world-class quality supported by a strong nationwide footprint.</p></div>
+        <div class="vm__item" data-r><h3><small>MISSION</small> Quality, reach, value</h3><p>Enhance food quality through innovation and technology, build a robust distribution network, and deliver dependable, cost-effective products without sacrificing safety or trust.</p></div>
+      </div>
+      <div style="margin-top:2rem" data-r><a class="ulink" href="about.html">Read our full story <svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--ink" aria-labelledby="num-t">
+  <div class="wrap">
+    <div class="head"><div><span class="label"><b>(02)</b> SBL in numbers</span><h2 class="h2" id="num-t" data-split>Scale, built on five decades of <em>trust.</em></h2></div><p class="lead" data-r>Every figure here is earned through control of sourcing, processing, testing and logistics — under one roof.</p></div>
+    <div class="numbers"><div class="num" data-r><span class="num__idx">(01)</span><div class="odo" data-odo="50">50+</div><p><b>Years of legacy</b>From a 1947 family enterprise to a 1972 food brand.</p></div><div class="num" data-r><span class="num__idx">(02)</span><div class="odo" data-odo="800">800+</div><p><b>Tonnes daily</b>Processed and supplied every single day.</p></div><div class="num" data-r><span class="num__idx">(03)</span><div class="odo" data-odo="350">350+</div><p><b>Distributors</b>A resilient network across South India.</p></div><div class="num" data-r><span class="num__idx">(04)</span><div class="odo" data-odo="235">235+</div><p><b>Locations</b>Dense urban markets and remote regions alike.</p></div><div class="num" data-r><span class="num__idx">(05)</span><div class="odo" data-odo="110">110+</div><p><b>Trusted products</b>Staples, spices, snacks, sweets and dairy.</p></div></div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="cat-t">
+  <div class="wrap">
+    <div class="head"><div><span class="label"><b>(03)</b> Product universe</span><h2 class="h2" id="cat-t" data-split>Staples that power homes <em>&amp; businesses.</em></h2></div><p class="lead" data-r>Hover to open each category. From 100g retail packs to 50Kg bulk bags.</p></div>
+    <div class="accord" data-r><a class="acc is-open" href="products.html#dals" style="--bg:#EADBC0" aria-expanded="true" data-cursor="Explore">
+  <span class="acc__num">01</span><span class="acc__vt" aria-hidden="true">Dals &amp; Pulses</span>
+  <div class="acc__body"><div><h3>Dals &amp; Pulses</h3><p>Toor, moong, urad, chana, masoor and more — sorted and polished for uniform cooking.</p></div><div class="acc__packs"><img src="assets/img/products/toor-dal.webp" alt="" loading="lazy"><img src="assets/img/products/bengal-gram.webp" alt="" loading="lazy"><img src="assets/img/products/masoor-dal.webp" alt="" loading="lazy"></div><span class="acc__go">12 products<span><svg class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></div>
+</a><a class="acc" href="products.html#flours" style="--bg:#F0E3CC" aria-expanded="false" data-cursor="Explore">
+  <span class="acc__num">02</span><span class="acc__vt" aria-hidden="true">Flours &amp; Rice Flakes</span>
+  <div class="acc__body"><div><h3>Flours &amp; Rice Flakes</h3><p>Chakki atta, maida, gram flour, ragi and rice flakes from our own mills.</p></div><div class="acc__packs"><img src="assets/img/products/chakki-atta.webp" alt="" loading="lazy"><img src="assets/img/products/rice-flakes.webp" alt="" loading="lazy"><img src="assets/img/products/ragi-flour.webp" alt="" loading="lazy"></div><span class="acc__go">14 products<span><svg class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></div>
+</a><a class="acc" href="products.html#suji" style="--bg:#E9D2C4" aria-expanded="false" data-cursor="Explore">
+  <span class="acc__num">03</span><span class="acc__vt" aria-hidden="true">Suji &amp; Semolina</span>
+  <div class="acc__body"><div><h3>Suji &amp; Semolina</h3><p>Bansi, idli, chiroti and Bombay rava — the backbone of South Indian breakfasts.</p></div><div class="acc__packs"><img src="assets/img/products/bansi-suji.webp" alt="" loading="lazy"><img src="assets/img/products/idli-suji.webp" alt="" loading="lazy"><img src="assets/img/products/chiroti-suji.webp" alt="" loading="lazy"></div><span class="acc__go">6 products<span><svg class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></div>
+</a><a class="acc" href="products.html#rice" style="--bg:#E3DEC9" aria-expanded="false" data-cursor="Explore">
+  <span class="acc__num">04</span><span class="acc__vt" aria-hidden="true">Rice</span>
+  <div class="acc__body"><div><h3>Rice</h3><p>Sona Masuri, Basmati, Ponni and specialty rice for homes and kitchens.</p></div><div class="acc__packs"><img src="assets/img/products/btc-gold-sona-masuri.webp" alt="" loading="lazy"><img src="assets/img/products/star-sona-masuri.webp" alt="" loading="lazy"><img src="assets/img/products/hotel-king-sona-masuri.webp" alt="" loading="lazy"></div><span class="acc__go">23 products<span><svg class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></div>
+</a><a class="acc" href="products.html#ranges" style="--bg:#EFD6C2" aria-expanded="false" data-cursor="Explore">
+  <span class="acc__num">05</span><span class="acc__vt" aria-hidden="true">Spices &amp; Millets</span>
+  <div class="acc__body"><div><h3>Spices &amp; Millets</h3><p>Whole and ground spices, traditional millets and kitchen essentials.</p></div><div class="acc__packs"><img src="assets/img/products-more/spices-3783.webp" alt="" loading="lazy"><img src="assets/img/products-more/millets-3772.webp" alt="" loading="lazy"><img src="assets/img/products-more/spices-3787.webp" alt="" loading="lazy"></div><span class="acc__go">Wider range<span><svg class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></div>
+</a><a class="acc" href="products.html#ranges" style="--bg:#E8DCC6" aria-expanded="false" data-cursor="Explore">
+  <span class="acc__num">06</span><span class="acc__vt" aria-hidden="true">Snacks, Sweets &amp; Dairy</span>
+  <div class="acc__body"><div><h3>Snacks, Sweets &amp; Dairy</h3><p>Mixtures, mithai, paneer and ghee from our in-house kitchens and dairy.</p></div><div class="acc__packs"><img src="assets/img/products-more/snacks-3845.webp" alt="" loading="lazy"><img src="assets/img/products-more/dairy-3837.webp" alt="" loading="lazy"><img src="assets/img/products-more/snacks-3847.webp" alt="" loading="lazy"></div><span class="acc__go">Wider range<span><svg class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></div>
+</a></div>
+  </div>
+</section>
+
+<section class="journey" id="journey" aria-labelledby="j-t">
+  <div class="journey__ghost" aria-hidden="true">1947</div>
+  <div class="journey__pin">
+    <div class="wrap">
+      <div class="journey__head">
+        <div><span class="label"><b>(04)</b> The SBL Journey</span><h2 class="h2" id="j-t">A legacy built <em>step by step.</em></h2></div>
+        <div class="journey__count" aria-hidden="true"><div class="yodo"><span style="transform:translateY(-10%)"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span><span style="transform:translateY(-90%)"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span><span style="transform:translateY(-40%)"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span><span style="transform:translateY(-70%)"><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></span></div><div class="journey__meta"><span class="journey__n">01 / 14</span><b class="journey__era">Roots</b></div></div>
+      </div>
+      <div class="eras" role="group" aria-label="Jump to an era"><button type="button" data-idx="0" aria-current="true"><b>1947</b> Roots</button><button type="button" data-idx="2" aria-current="false"><b>1972</b> Trading</button><button type="button" data-idx="3" aria-current="false"><b>1982</b> Rice</button><button type="button" data-idx="5" aria-current="false"><b>1989</b> Milling</button><button type="button" data-idx="6" aria-current="false"><b>2011</b> Next gen</button><button type="button" data-idx="9" aria-current="false"><b>2017</b> Expansion</button><button type="button" data-idx="12" aria-current="false"><b>2022</b> Golden years</button></div>
+    </div>
+    <div class="jtrack"><div class="jline" aria-hidden="true"><i></i></div><div class="jitem jitem--top is-active" data-yr="1947" data-era="Roots">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media jcard__media--cover"><img src="assets/img/photos/farmer.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">Roots</span><div class="jcard__y">1947</div><h3>Foundations of a Family Enterprise</h3><p>B. S. Seetharam Shetty lays the family business foundation on integrity, hard work and community.</p></div></article>
+</div><div class="jitem jitem--bottom" data-yr="1960" data-era="The founding">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/photos/sack-wheat.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">The founding</span><div class="jcard__y">1960</div><h3>Birth of Sri Bhagyalakshmi Industries</h3><p>B. S. Amaranarayana Gupta establishes Sri Bhagyalakshmi Industries — organised food processing begins.</p></div></article>
+</div><div class="jitem jitem--top" data-yr="1972" data-era="Trading">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/products/fried-gram.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">Trading</span><div class="jcard__y">1972</div><h3>Trading Capabilities Take Shape</h3><p>Sri Bhagyalakshmi Trading Corporation opens with its own fried gram unit.</p></div></article>
+</div><div class="jitem jitem--bottom" data-yr="1982" data-era="Rice processing">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/products/btc-gold-sona-masuri.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">Rice processing</span><div class="jcard__y">1982</div><h3>Expansion into Rice Processing</h3><p>Sri Balaji Rice Industries is formed through an acquisition — large-scale rice processing begins.</p></div></article>
+</div><div class="jitem jitem--top" data-yr="1985" data-era="Value-added rice">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/products/thick-rice-flakes.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">Value-added rice</span><div class="jcard__y">1985</div><h3>Value-Added Rice Products Introduced</h3><p>Sri Bhagyalakshmi Enterprises starts producing premium thick and thin rice flakes.</p></div></article>
+</div><div class="jitem jitem--bottom" data-yr="1989" data-era="Wheat milling">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/products/maida.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">Wheat milling</span><div class="jcard__y">1989</div><h3>Foray into Wheat Milling</h3><p>Sri Bhagyalakshmi Agro Foods Pvt. Ltd. begins milling maida and semolina at scale.</p></div></article>
+</div><div class="jitem jitem--top" data-yr="2011" data-era="Fourth generation">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/photos/flour-bowl.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">Fourth generation</span><div class="jcard__y">2011</div><h3>Fourth Generation Entrepreneurship</h3><p>Gupta Foods is launched for trading, HoReCa and institutional food supply.</p></div></article>
+</div><div class="jitem jitem--bottom" data-yr="2012" data-era="Going global">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media jcard__media--cover"><img src="assets/img/photos/paddy-field.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">Going global</span><div class="jcard__y">2012</div><h3>Global Footprint Established</h3><p>The first overseas rice processing unit opens: Nyagatare Agro Ventures, Rwanda.</p></div></article>
+</div><div class="jitem jitem--top" data-yr="2013" data-era="Agro trading">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/photos/sack-rice.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">Agro trading</span><div class="jcard__y">2013</div><h3>Strengthening Agro Trading</h3><p>Amar Trading Company strengthens agro-product trading and market outreach.</p></div></article>
+</div><div class="jitem jitem--bottom" data-yr="2017" data-era="Food park">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/photos/agratha.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">Food park</span><div class="jcard__y">2017</div><h3>M/s Agratha Mega Food Park LLP</h3><p>Agratha Mega Food Park LLP — processing units, silos, cold storage, labs and logistics in one ecosystem.</p></div></article>
+</div><div class="jitem jitem--top" data-yr="2018" data-era="North Karnataka">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/products/gram-dal.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">North Karnataka</span><div class="jcard__y">2018</div><h3>Shree Bhageeratha Industries</h3><p>Shree Bhageeratha Industries in Dharwad processes fried gram and pulses for the region.</p></div></article>
+</div><div class="jitem jitem--bottom" data-yr="2019" data-era="Central India">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/products/bansi-suji.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">Central India</span><div class="jcard__y">2019</div><h3>M/s Amar Moti Agro Foods LLP</h3><p>Amar Moti Agro Foods LLP in Indore processes Bansi Suji, flours and pulses at full scale.</p></div></article>
+</div><div class="jitem jitem--top" data-yr="2022" data-era="Golden jubilee">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/photos/logo.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">Golden jubilee</span><div class="jcard__y">2022</div><h3>Our Golden Journey of Excellence</h3><p>50 glorious years of passion and perseverance — a milestone of enduring legacy.</p></div></article>
+</div><div class="jitem jitem--bottom" data-yr="2024" data-era="New categories">
+  <span class="jstem" aria-hidden="true"></span><span class="jnode" aria-hidden="true"></span>
+  <article class="jcard"><div class="jcard__media"><img src="assets/img/products-more/snacks-3846.webp" alt="" loading="lazy"></div>
+  <div class="jcard__body"><span class="jcard__tag">New categories</span><div class="jcard__y">2024</div><h3>Expanding Our Reach in Processed Foods</h3><p>Sweets, snacks, ready-to-cook and ready-to-eat products join the portfolio.</p></div></article>
+</div></div>
+    <div class="wrap"><p class="journey__hint" aria-hidden="true"><span></span>Keep scrolling to travel through time</p></div>
+  </div>
+</section>
+
+<section class="clipmedia" aria-labelledby="clip-t">
+  <div class="clipmedia__inner"><img src="assets/img/photos/factory-packing.webp" alt="Automated packing line in an SBL plant" loading="lazy" width="1600" height="1066"></div>
+  <div class="clipmedia__text"><div class="wrap">
+    <span class="label" style="color:rgba(251,248,241,.8)"><b style="color:var(--saffron-2)">(05)</b> World-class infrastructure</span>
+    <h2 class="h2" id="clip-t">Manufacturing excellence, <em>powered by technology.</em></h2>
+    <div class="clipmedia__chips"><span>4 GMP-certified units</span><span>800+ tonnes daily</span><span>Bühler &amp; Sortex</span><span>Fully automated</span><span>Hygienic smart packing</span><span>In-house quality labs</span></div>
+  </div></div>
+</section>
+
+<section class="sec" id="process" aria-labelledby="proc-t">
+  <div class="wrap">
+    <div class="head"><div><span class="label"><b>(05)</b> How value is created</span><h2 class="h2" id="proc-t" data-split>From farm to <em>every plate.</em></h2></div><p class="lead" data-r>Six stages, one integrated chain. Scroll through how a grain becomes a trusted pack.</p></div>
+    <div class="stack"><article class="scard" style="--i:0;--bg:var(--ivory);--fg:var(--ink)">
+  <div><div class="scard__n">01</div><h3>Farm Sourcing</h3><p>Direct procurement from 8,000+ farmers with fair, transparent pricing.</p></div>
+  <div class="scard__ico"><svg class="" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M12 20v-8"/><path d="M12 12c0-4-3-6-7-6 0 4 3 6 7 6Z"/><path d="M12 10c0-3.5 2.5-6 6.5-6 0 3.5-2.5 6-6.5 6Z"/></svg></div>
+</article><article class="scard" style="--i:1;--bg:var(--sand);--fg:var(--ink)">
+  <div><div class="scard__n">02</div><h3>Processing</h3><p>Four GMP-certified plants in Bengaluru with Bühler &amp; Sortex technology.</p></div>
+  <div class="scard__ico"><svg class="" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20"/><path d="M4 20V10l5 3V10l5 3V6l6 3v11"/><path d="M8 17h1M12 17h1M16 17h1"/></svg></div>
+</article><article class="scard" style="--i:2;--bg:var(--saffron);--fg:var(--ink)">
+  <div><div class="scard__n">03</div><h3>Quality Control</h3><p>In-house labs for raw material, paddy, microbial &amp; chemical testing.</p></div>
+  <div class="scard__ico"><svg class="" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 18.5A1.8 1.8 0 0 0 6 21h12a1.8 1.8 0 0 0 1.5-2.5L14 9V3"/><path d="M7 15h10"/></svg></div>
+</article><article class="scard" style="--i:3;--bg:var(--wine);--fg:var(--paper)">
+  <div><div class="scard__n">04</div><h3>Packaging</h3><p>Hygienic smart packing systems — from 100g packs to 50Kg bags.</p></div>
+  <div class="scard__ico"><svg class="" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="M3 8l9 5 9-5M12 13v8"/><path d="m7.5 5.5 9 5"/></svg></div>
+</article><article class="scard" style="--i:4;--bg:var(--wine-3);--fg:var(--paper)">
+  <div><div class="scard__n">05</div><h3>Distribution</h3><p>A company-owned fleet of 100–150 cargo vehicles and 350+ distributors.</p></div>
+  <div class="scard__ico"><svg class="" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
+</article><article class="scard" style="--i:5;--bg:var(--ink);--fg:var(--paper)">
+  <div><div class="scard__n">06</div><h3>Retail · HoReCa · Exports</h3><p>Reaching homes, professional kitchens, institutions and global markets.</p></div>
+  <div class="scard__ico"><svg class="" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10 5 4h14l2 6c0 1.7-1.3 3-3 3s-3-1.3-3-3c0 1.7-1.3 3-3 3s-3-1.3-3-3c0 1.7-1.3 3-3 3s-3-1.3-3-3Z"/><path d="M10 20v-5h4v5"/></svg></div>
+</article></div>
+  </div>
+</section>
+
+<section class="sec sec--ivory" aria-labelledby="feat-t">
+  <div class="wrap">
+    <div class="head"><div><span class="label"><b>(06)</b> Signature packs</span><h2 class="h2" id="feat-t" data-split>Hover a pack. <em>Meet the range.</em></h2></div><div data-r><a class="btn magnetic " href="products.html">Full catalogue<span class="btn__ico"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></div>
+    <div class="fgrid"><article class="flip" data-r data-cat="dals" data-catlabel="Dals &amp; Pulses" data-name="Toor Dal" data-sizes="200g|500g|1Kg|5Kg|10Kg|30Kg" data-search="toor dal dals &amp; pulses 200g, 500g, 1kg, 5kg, 10kg &amp; 30kg" data-cursor="Flip">
+  <button class="flip__tap" type="button" aria-label="Show details for Toor Dal" aria-pressed="false"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  <div class="flip__in">
+    <figure class="flip__f" style="margin:0"><img src="assets/img/products/toor-dal.webp" alt="Toor Dal pack" width="330" height="458" loading="lazy" decoding="async"><figcaption><b>Toor Dal</b><small>Dals &amp; Pulses</small></figcaption></figure>
+    <div class="flip__b" style="--img:url(assets/img/products/toor-dal.webp)"><small>Dals &amp; Pulses</small><h3>Toor Dal</h3><span style="font-size:.72rem;opacity:.7;margin-bottom:.4rem;position:relative">Available packs</span><ul><li>200g</li><li>500g</li><li>1Kg</li><li>5Kg</li><li>10Kg</li><li>30Kg</li></ul><a class="btn btn--light" href="products.html#dals">View range<span class="btn__ico"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  </div>
+</article><article class="flip" data-r data-cat="flours" data-catlabel="Flours &amp; Rice Flakes" data-name="Chakki Atta" data-sizes="500g|1Kg|5Kg|10Kg|30Kg|50Kg" data-search="chakki atta flours &amp; rice flakes 500g, 1kg, 5kg, 10kg, 30kg &amp; 50kg" data-cursor="Flip">
+  <button class="flip__tap" type="button" aria-label="Show details for Chakki Atta" aria-pressed="false"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  <div class="flip__in">
+    <figure class="flip__f" style="margin:0"><img src="assets/img/products/chakki-atta.webp" alt="Chakki Atta pack" width="300" height="417" loading="lazy" decoding="async"><figcaption><b>Chakki Atta</b><small>Flours &amp; Rice Flakes</small></figcaption></figure>
+    <div class="flip__b" style="--img:url(assets/img/products/chakki-atta.webp)"><small>Flours &amp; Rice Flakes</small><h3>Chakki Atta</h3><span style="font-size:.72rem;opacity:.7;margin-bottom:.4rem;position:relative">Available packs</span><ul><li>500g</li><li>1Kg</li><li>5Kg</li><li>10Kg</li><li>30Kg</li><li>50Kg</li></ul><a class="btn btn--light" href="products.html#flours">View range<span class="btn__ico"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  </div>
+</article><article class="flip" data-r data-cat="suji" data-catlabel="Suji &amp; Semolina" data-name="Bansi Suji" data-sizes="500g|1Kg|5Kg|10Kg|30Kg" data-search="bansi suji suji &amp; semolina 500g, 1kg, 5kg, 10kg &amp; 30kg" data-cursor="Flip">
+  <button class="flip__tap" type="button" aria-label="Show details for Bansi Suji" aria-pressed="false"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  <div class="flip__in">
+    <figure class="flip__f" style="margin:0"><img src="assets/img/products/bansi-suji.webp" alt="Bansi Suji pack" width="331" height="458" loading="lazy" decoding="async"><figcaption><b>Bansi Suji</b><small>Suji &amp; Semolina</small></figcaption></figure>
+    <div class="flip__b" style="--img:url(assets/img/products/bansi-suji.webp)"><small>Suji &amp; Semolina</small><h3>Bansi Suji</h3><span style="font-size:.72rem;opacity:.7;margin-bottom:.4rem;position:relative">Available packs</span><ul><li>500g</li><li>1Kg</li><li>5Kg</li><li>10Kg</li><li>30Kg</li></ul><a class="btn btn--light" href="products.html#suji">View range<span class="btn__ico"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  </div>
+</article><article class="flip" data-r data-cat="rice" data-catlabel="Rice" data-name="BTC Gold Sona Masuri" data-sizes="5Kg|10Kg|26Kg" data-search="btc gold sona masuri rice 5kg, 10kg &amp; 26kg" data-cursor="Flip">
+  <button class="flip__tap" type="button" aria-label="Show details for BTC Gold Sona Masuri" aria-pressed="false"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  <div class="flip__in">
+    <figure class="flip__f" style="margin:0"><img src="assets/img/products/btc-gold-sona-masuri.webp" alt="BTC Gold Sona Masuri pack" width="265" height="369" loading="lazy" decoding="async"><figcaption><b>BTC Gold Sona Masuri</b><small>Rice</small></figcaption></figure>
+    <div class="flip__b" style="--img:url(assets/img/products/btc-gold-sona-masuri.webp)"><small>Rice</small><h3>BTC Gold Sona Masuri</h3><span style="font-size:.72rem;opacity:.7;margin-bottom:.4rem;position:relative">Available packs</span><ul><li>5Kg</li><li>10Kg</li><li>26Kg</li></ul><a class="btn btn--light" href="products.html#rice">View range<span class="btn__ico"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  </div>
+</article><article class="flip" data-r data-cat="flours" data-catlabel="Flours &amp; Rice Flakes" data-name="Rice Flakes" data-sizes="500g|10Kg|30Kg" data-search="rice flakes flours &amp; rice flakes 500g, 10kg &amp; 30kg" data-cursor="Flip">
+  <button class="flip__tap" type="button" aria-label="Show details for Rice Flakes" aria-pressed="false"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  <div class="flip__in">
+    <figure class="flip__f" style="margin:0"><img src="assets/img/products/rice-flakes.webp" alt="Rice Flakes pack" width="331" height="458" loading="lazy" decoding="async"><figcaption><b>Rice Flakes</b><small>Flours &amp; Rice Flakes</small></figcaption></figure>
+    <div class="flip__b" style="--img:url(assets/img/products/rice-flakes.webp)"><small>Flours &amp; Rice Flakes</small><h3>Rice Flakes</h3><span style="font-size:.72rem;opacity:.7;margin-bottom:.4rem;position:relative">Available packs</span><ul><li>500g</li><li>10Kg</li><li>30Kg</li></ul><a class="btn btn--light" href="products.html#flours">View range<span class="btn__ico"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  </div>
+</article><article class="flip" data-r data-cat="dals" data-catlabel="Dals &amp; Pulses" data-name="Bengal Gram" data-sizes="500g|5Kg|10Kg|30Kg|50Kg" data-search="bengal gram dals &amp; pulses 500g, 5kg, 10kg, 30kg &amp; 50kg" data-cursor="Flip">
+  <button class="flip__tap" type="button" aria-label="Show details for Bengal Gram" aria-pressed="false"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  <div class="flip__in">
+    <figure class="flip__f" style="margin:0"><img src="assets/img/products/bengal-gram.webp" alt="Bengal Gram pack" width="330" height="458" loading="lazy" decoding="async"><figcaption><b>Bengal Gram</b><small>Dals &amp; Pulses</small></figcaption></figure>
+    <div class="flip__b" style="--img:url(assets/img/products/bengal-gram.webp)"><small>Dals &amp; Pulses</small><h3>Bengal Gram</h3><span style="font-size:.72rem;opacity:.7;margin-bottom:.4rem;position:relative">Available packs</span><ul><li>500g</li><li>5Kg</li><li>10Kg</li><li>30Kg</li><li>50Kg</li></ul><a class="btn btn--light" href="products.html#dals">View range<span class="btn__ico"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  </div>
+</article><article class="flip" data-r data-cat="suji" data-catlabel="Suji &amp; Semolina" data-name="Idli Suji" data-sizes="1Kg|10Kg|30Kg|50Kg" data-search="idli suji suji &amp; semolina 1kg, 10kg, 30kg &amp; 50kg" data-cursor="Flip">
+  <button class="flip__tap" type="button" aria-label="Show details for Idli Suji" aria-pressed="false"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  <div class="flip__in">
+    <figure class="flip__f" style="margin:0"><img src="assets/img/products/idli-suji.webp" alt="Idli Suji pack" width="273" height="331" loading="lazy" decoding="async"><figcaption><b>Idli Suji</b><small>Suji &amp; Semolina</small></figcaption></figure>
+    <div class="flip__b" style="--img:url(assets/img/products/idli-suji.webp)"><small>Suji &amp; Semolina</small><h3>Idli Suji</h3><span style="font-size:.72rem;opacity:.7;margin-bottom:.4rem;position:relative">Available packs</span><ul><li>1Kg</li><li>10Kg</li><li>30Kg</li><li>50Kg</li></ul><a class="btn btn--light" href="products.html#suji">View range<span class="btn__ico"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  </div>
+</article><article class="flip" data-r data-cat="flours" data-catlabel="Flours &amp; Rice Flakes" data-name="Maida" data-sizes="500g|1Kg|10Kg|30Kg|50Kg" data-search="maida flours &amp; rice flakes 500g, 1kg, 10kg, 30kg &amp; 50kg" data-cursor="Flip">
+  <button class="flip__tap" type="button" aria-label="Show details for Maida" aria-pressed="false"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  <div class="flip__in">
+    <figure class="flip__f" style="margin:0"><img src="assets/img/products/maida.webp" alt="Maida pack" width="300" height="417" loading="lazy" decoding="async"><figcaption><b>Maida</b><small>Flours &amp; Rice Flakes</small></figcaption></figure>
+    <div class="flip__b" style="--img:url(assets/img/products/maida.webp)"><small>Flours &amp; Rice Flakes</small><h3>Maida</h3><span style="font-size:.72rem;opacity:.7;margin-bottom:.4rem;position:relative">Available packs</span><ul><li>500g</li><li>1Kg</li><li>10Kg</li><li>30Kg</li><li>50Kg</li></ul><a class="btn btn--light" href="products.html#flours">View range<span class="btn__ico"><svg class="" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  </div>
+</article></div>
+  </div>
+</section>
+
+<div class="vmarquee vmarquee--ink" aria-hidden="true"><div class="vmarquee__track" data-dir="right"><span class="vmarquee__item">Tested<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Tasted<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Trusted<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Since 1972<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Tested<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Tasted<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Trusted<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span><span class="vmarquee__item">Since 1972<img src="assets/img/photos/logo.webp" alt="" width="40" height="38"></span></div></div>
+
+<section class="sec" aria-labelledby="mk-t">
+  <div class="wrap split">
+    <div class="media media--wide" data-r-img><img src="assets/img/photos/fleet.webp" alt="SBL’s company-owned truck fleet" loading="lazy" width="1076" height="717"></div>
+    <div>
+      <span class="label" data-r><b>(07)</b> Markets we serve</span>
+      <h2 class="h2" id="mk-t" data-split style="margin-top:1rem">South India dominance. <em>National reach.</em> Global presence.</h2>
+      <p class="lead" data-r>350+ distributors across 235+ locations, an owned fleet of 100–150 vehicles, and export presence across the Middle East and Africa.</p>
+      <div class="tags" data-r><span>Dubai</span><span>Abu Dhabi</span><span>Qatar</span><span>Rwanda</span><span>Mozambique</span><span>Tanzania</span><span>Malawi</span></div>
+      <div style="margin-top:2rem" data-r><a class="btn magnetic btn--line" href="markets.html">Our reach<span class="btn__ico"><svg class="" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--ivory" aria-labelledby="cl-t" style="padding-top:calc(var(--sec)*.6)">
+  <div class="wrap">
+    <div class="head head--c"><span class="label"><b>(08)</b> A legacy of trust</span><h2 class="h3" id="cl-t" data-split>Chosen by leading kitchens, retailers <em>&amp; institutions</em></h2></div>
+    <div class="lwall" data-r><div><img src="assets/img/clients/horeca-3947.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-3983.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-3985.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-3987.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-3988.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-3993.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-3994.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-3999.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-4002.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-4003.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-4009.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-4010.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/horeca-4011.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/ecom-4013.webp" alt="Client logo" loading="lazy"></div><div><img src="assets/img/clients/ecom-4014.webp" alt="Client logo" loading="lazy"></div></div>
+  </div>
+</section>
+
+</main>
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__cta">
+      <h2 data-split>Let’s build a long-term <em>supply partnership.</em></h2>
+      <div class="ftr__cta-r"><a class="bigcircle magnetic" href="contact.html" data-cursor="Talk">START AN<br>ENQUIRY<svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+    <div class="ftr__grid">
+      <div><img src="assets/img/photos/logo.webp" alt="Sri Bhagyalakshmi" width="72" height="69" loading="lazy" style="margin-bottom:1rem"><p style="max-width:320px;font-size:.92rem">Tested · Tasted · Trusted. A food processing legacy of over 50 years, rooted in South India and expanding worldwide.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="operations.html">Operations</a></li><li><a href="markets.html">Markets</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Products</h4><ul><li><a href="products.html#dals">Dals &amp; Pulses</a></li><li><a href="products.html#flours">Flours &amp; Flakes</a></li><li><a href="products.html#suji">Suji &amp; Semolina</a></li><li><a href="products.html#rice">Rice</a></li><li><a href="products.html#ranges">Spices &amp; more</a></li></ul></div>
+      <div><h4>Head Office</h4><ul><li>#321/A, Opp. BHEL, Mysore Road,<br>Bengaluru 560039</li><li><a href="tel:+918026741561">+91-80-26741561</a></li><li><a href="mailto:sbaf@sblfoods.com">sbaf@sblfoods.com</a></li></ul></div>
+    </div>
+  </div>
+  <div class="ftr__word-wrap"><div class="ftr__word" aria-hidden="true">Sri Bhagya<em>lakshmi</em></div></div>
+  <div class="wrap">
+    <div class="ftr__bar">
+      <div class="ftr__langs"><span lang="kn">ಅನ್ನವೇ ಬ್ರಹ್ಮ</span><span lang="hi">अन्नं ब्रह्म</span><span lang="ta">அன்னமே பிரம்மம்</span><span lang="te">అన్నమే బ్రహ్మ</span><span lang="ml">അന്നം ബ്രഹ്മം</span></div>
+      <span>© <span data-year>2026</span> Sri Bhagyalakshmi Foods · Rooted in South India. Trusted by Millions.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/vendor/gsap.min.js" defer></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/vendor/lenis.min.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+/* SBL Foods — Version B motion engine (GSAP + ScrollTrigger + Lenis) */
+(function () {
+  'use strict';
+  var html = document.documentElement;
+  html.classList.remove('no-js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var hasGsap = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
+  if (reduce || !hasGsap) html.classList.add('reduce');
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var store = { get: function (k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }, set: function (k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} } };
+
+  /* ---------------- Utilities usable without GSAP ---------------- */
+  function initBasics() {
+    var onS = function () { html.classList.toggle('scrolled', window.scrollY > 40); };
+    window.addEventListener('scroll', onS, { passive: true }); onS();
+    // year
+    $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+    // tabs
+    $$('[role="tablist"]').forEach(function (list) {
+      var tabs = $$('[role="tab"]', list);
+      function sel(t, focus) {
+        tabs.forEach(function (x) {
+          var on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1;
+          var p = document.getElementById(x.getAttribute('aria-controls')); if (p) p.hidden = !on;
+        });
+        if (focus) t.focus();
+        if (window.ScrollTrigger) ScrollTrigger.refresh();
+        var p = document.getElementById(t.getAttribute('aria-controls'));
+        if (p && window.gsap && !reduce) gsap.from($$('.lwall > div', p), { opacity: 0, y: 20, duration: .6, stagger: .03, ease: 'power3.out' });
+      }
+      tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () { sel(t); });
+        t.addEventListener('keydown', function (e) {
+          var n = e.key === 'ArrowRight' ? tabs[(i + 1) % tabs.length] : e.key === 'ArrowLeft' ? tabs[(i - 1 + tabs.length) % tabs.length] : null;
+          if (n) { e.preventDefault(); sel(n, true); }
+        });
+      });
+    });
+    // flip cards on touch
+    $$('.flip__tap').forEach(function (b) {
+      b.addEventListener('click', function (e) { e.preventDefault(); var f = b.closest('.flip'); var on = f.classList.toggle('is-flipped'); b.setAttribute('aria-pressed', on); });
+    });
+    // forms → mailto
+    $$('form[data-mailto]').forEach(function (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        var fd = new FormData(form), lines = [];
+        fd.forEach(function (v, k) { if (k !== 'subject' && String(v).trim()) lines.push(k.charAt(0).toUpperCase() + k.slice(1) + ': ' + v); });
+        location.href = 'mailto:' + form.getAttribute('data-mailto') + '?subject=' + encodeURIComponent(fd.get('subject') || 'Enquiry') + '&body=' + encodeURIComponent(lines.join('\n'));
+        var ok = $('.form__ok', form); ok && ok.classList.add('is-on');
+      });
+    });
+    // accordion categories
+    $$('.accord').forEach(function (acc) {
+      var items = $$('.acc', acc);
+      function open(it) { items.forEach(function (x) { x.classList.toggle('is-open', x === it); x.setAttribute('aria-expanded', x === it); }); }
+      items.forEach(function (it) {
+        it.addEventListener('mouseenter', function () { if (window.innerWidth >= 900) open(it); });
+        it.addEventListener('focus', function () { open(it); });
+      });
+    });
+    // query string prefill
+    var q = new URLSearchParams(location.search).get('product');
+    var msg = $('#f-msg'); if (q && msg) msg.value = 'Enquiry about: ' + q + '\n';
+  }
+  initBasics();
+
+  /* ---------------- Menu (mobile) ---------------- */
+  var burger = $('.burger'), menu = $('.menu');
+  var lenis = null;
+  function setMenu(open) {
+    html.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menu.setAttribute('aria-hidden', !open);
+    if (lenis) open ? lenis.stop() : lenis.start();
+    if (hasGsap && !reduce) {
+      if (open) {
+        gsap.timeline()
+          .to(menu, { clipPath: 'inset(0 0 0% 0)', duration: .9, ease: 'expo.inOut' })
+          .from($$('.menu__list a', menu), { yPercent: 110, duration: .8, stagger: .06, ease: 'expo.out' }, '-=.35')
+          .from($('.menu__foot', menu), { opacity: 0, y: 20, duration: .6 }, '-=.6');
+      } else gsap.to(menu, { clipPath: 'inset(0 0 100% 0)', duration: .8, ease: 'expo.inOut' });
+    } else menu.style.clipPath = open ? 'inset(0 0 0 0)' : 'inset(0 0 100% 0)';
+    if (open) setTimeout(function () { var a = $('.menu__list a', menu); a && a.focus(); }, 500);
+  }
+  if (burger && menu) {
+    burger.addEventListener('click', function () { setMenu(!html.classList.contains('menu-open')); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && html.classList.contains('menu-open')) { setMenu(false); burger.focus(); } });
+  }
+
+  if (!hasGsap || reduce) {
+    // no motion: hide loaders/curtains, make links/anchors plain
+    var pl = $('.preloader'); if (pl) pl.remove();
+    html.classList.remove('from-nav');
+    initStaticJourney();
+    window.SBL_READY = true;
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ---------------- Smooth scroll ---------------- */
+  if (window.Lenis) {
+    lenis = new Lenis({ lerp: 0.095, wheelMultiplier: 1, smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+    gsap.ticker.lagSmoothing(0);
+    window.SBL_LENIS = lenis;
+  }
+  // in-page anchors
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="#"]'); if (!a) return;
+    var url = new URL(a.href, location.href);
+    if (url.pathname !== location.pathname || !url.hash) return;
+    var t = document.querySelector(url.hash); if (!t) return;
+    e.preventDefault();
+    if (html.classList.contains('menu-open')) setMenu(false);
+    history.pushState(null, '', url.hash);
+    window.dispatchEvent(new HashChangeEvent('hashchange'));
+    lenis ? lenis.scrollTo(t, { offset: -90, duration: 1.4 }) : t.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  /* ---------------- Header ---------------- */
+  var hdr = $('.hdr');
+  ScrollTrigger.create({
+    start: 'top top', end: 'max',
+    onUpdate: function (s) {
+      if (html.classList.contains('menu-open')) return;
+      hdr.classList.toggle('is-hidden', s.direction === 1 && s.scroll() > 300);
+    }
+  });
+  // pill nav blob
+  var pill = $('.pillnav'), blob = pill && $('.pillnav__blob', pill);
+  if (pill && blob) {
+    var cur = $('a[aria-current="page"]', pill);
+    function moveBlob(a) {
+      if (!a) { blob.style.opacity = 0; return; }
+      blob.style.opacity = 1; blob.style.width = a.offsetWidth + 'px'; blob.style.transform = 'translateX(' + a.offsetLeft + 'px)';
+    }
+    $$('a', pill).forEach(function (a) { a.addEventListener('mouseenter', function () { moveBlob(a); }); a.addEventListener('focus', function () { moveBlob(a); }); });
+    pill.addEventListener('mouseleave', function () { moveBlob(cur); });
+    requestAnimationFrame(function () { moveBlob(cur); });
+    window.addEventListener('resize', function () { moveBlob(cur); });
+  }
+
+  /* ---------------- Cursor + magnetic ---------------- */
+  if (fine) {
+    html.classList.add('has-cursor');
+    var cursor = $('.cursor'), dot = $('.cursor__dot'), ring = $('.cursor__ring'), label = $('.cursor__ring span');
+    var dx = gsap.quickTo(dot, 'x', { duration: .12, ease: 'power3' }), dy = gsap.quickTo(dot, 'y', { duration: .12, ease: 'power3' });
+    var rx = gsap.quickTo(ring, 'x', { duration: .5, ease: 'power3' }), ry = gsap.quickTo(ring, 'y', { duration: .5, ease: 'power3' });
+    window.addEventListener('pointermove', function (e) { dx(e.clientX); dy(e.clientY); rx(e.clientX); ry(e.clientY); }, { passive: true });
+    document.addEventListener('pointerover', function (e) {
+      var l = e.target.closest('[data-cursor]');
+      var h = e.target.closest('a,button,summary,label,input,select,textarea');
+      cursor.classList.toggle('is-label', !!l);
+      cursor.classList.toggle('is-hover', !l && !!h);
+      label.textContent = l ? l.getAttribute('data-cursor') : '';
+      cursor.classList.toggle('on-dark', !!e.target.closest('.sec--ink,.sec--wine,.journey,.ftr,.menu,.clipmedia,.flip__b'));
+    });
+    document.addEventListener('pointerleave', function () { gsap.to(cursor, { opacity: 0, duration: .3 }); });
+    document.addEventListener('pointerenter', function () { gsap.to(cursor, { opacity: 1, duration: .3 }); });
+    $$('.magnetic').forEach(function (m) {
+      var mx = gsap.quickTo(m, 'x', { duration: .6, ease: 'elastic.out(1,.4)' }), my = gsap.quickTo(m, 'y', { duration: .6, ease: 'elastic.out(1,.4)' });
+      m.addEventListener('pointermove', function (e) { var r = m.getBoundingClientRect(); mx((e.clientX - r.left - r.width / 2) * .3); my((e.clientY - r.top - r.height / 2) * .35); });
+      m.addEventListener('pointerleave', function () { mx(0); my(0); });
+    });
+  }
+
+  /* ---------------- Text splitting ---------------- */
+  function splitWords(el) {
+    if (el._split) return el._split;
+    var out = [];
+    (function walk(node, wrapEm) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+        if (n.nodeType === 3) {
+          var parts = n.textContent.split(/(\s+)/), frag = document.createDocumentFragment();
+          parts.forEach(function (p) {
+            if (!p) return;
+            if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(' ')); return; }
+            var line = document.createElement('span'); line.className = 'split-line'; line.style.display = 'inline-block';
+            var inner = document.createElement('span'); inner.textContent = p; line.appendChild(inner); frag.appendChild(line); out.push(inner);
+          });
+          n.parentNode.replaceChild(frag, n);
+        } else if (n.nodeType === 1 && n.tagName !== 'BR') walk(n);
+      });
+    })(el);
+    el._split = out; return out;
+  }
+  function splitChars(el) {
+    var out = [];
+    (function walk(node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+        if (n.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          n.textContent.split('').forEach(function (c) {
+            if (c === ' ') { frag.appendChild(document.createTextNode(' ')); return; }
+            var s = document.createElement('span'); s.className = 'char'; s.textContent = c; frag.appendChild(s); out.push(s);
+          });
+          n.parentNode.replaceChild(frag, n);
+        } else if (n.nodeType === 1) walk(n);
+      });
+    })(el);
+    return out;
+  }
+
+  /* ---------------- Intro: preloader or curtain ---------------- */
+  var preloader = $('.preloader');
+  var curtainSpans = $$('.curtain span');
+  var curtainLogo = $('.curtain__logo');
+  var heroTl = gsap.timeline({ paused: true });
+  buildHeroIntro(heroTl);
+
+  var firstVisit = !store.get('sbl-visited') && preloader;
+  if (firstVisit) {
+    store.set('sbl-visited', '1');
+    var countEl = $('.preloader__count'), bar = $('.preloader__bar span');
+    var o = { v: 0 };
+    lenis && lenis.stop();
+    var pt = gsap.timeline({ onComplete: function () { preloader.remove(); lenis && lenis.start(); } });
+    pt.to(o, { v: 100, duration: 1.8, ease: 'power2.inOut', onUpdate: function () { countEl.textContent = Math.round(o.v); } })
+      .to(bar, { scaleX: 1, duration: 1.8, ease: 'power2.inOut' }, 0)
+      .to($('.preloader__logo'), { scale: .8, opacity: 0, duration: .5 }, '-=.2')
+      .to(preloader, { clipPath: 'inset(0 0 100% 0)', duration: 1.1, ease: 'expo.inOut' }, '-=.1')
+      .add(function () { heroTl.play(); }, '-=.55');
+    preloader.style.clipPath = 'inset(0 0 0% 0)';
+  } else {
+    if (preloader) preloader.remove();
+    if (html.classList.contains('from-nav')) {
+      gsap.set(curtainSpans, { scaleY: 1 });
+      gsap.set(curtainLogo, { opacity: 1 });
+      html.classList.remove('from-nav');
+      gsap.timeline()
+        .to(curtainLogo, { opacity: 0, duration: .3 })
+        .to(curtainSpans, { scaleY: 0, transformOrigin: 'top', duration: .8, stagger: .06, ease: 'expo.inOut' }, '-=.1')
+        .add(function () { heroTl.play(); }, '-=.5');
+    } else heroTl.play();
+  }
+
+  // page leave
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a'); if (!a || e.defaultPrevented) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target === '_blank' || a.hasAttribute('download')) return;
+    var href = a.getAttribute('href') || '';
+    if (/^(mailto:|tel:|https?:|#)/.test(href)) return;
+    var url = new URL(a.href, location.href);
+    if (url.pathname === location.pathname) return;
+    e.preventDefault();
+    store.set('sbl-nav', '1');
+    lenis && lenis.stop();
+    gsap.timeline({ onComplete: function () { location.href = a.href; } })
+      .set(curtainSpans, { transformOrigin: 'bottom' })
+      .to(curtainSpans, { scaleY: 1, duration: .7, stagger: .05, ease: 'expo.inOut' })
+      .to(curtainLogo, { opacity: 1, duration: .25 }, '-=.2');
+  });
+  window.addEventListener('pageshow', function (e) {
+    if (e.persisted) { gsap.set(curtainSpans, { scaleY: 0 }); gsap.set(curtainLogo, { opacity: 0 }); lenis && lenis.start(); }
+  });
+
+  function buildHeroIntro(tl) {
+    var h = $('.hero, .phero'); if (!h) return;
+    var lines = $$('.split-line > span', h);
+    var title = $('h1', h);
+    if (!lines.length && title) lines = splitWords(title);
+    tl.from(lines, { yPercent: 115, rotate: 4, duration: 1.3, stagger: .07, ease: 'expo.out' })
+      .from($$('[data-hero]', h), { opacity: 0, y: 30, duration: 1, stagger: .08, ease: 'expo.out' }, '-=1')
+      .from($$('.carousel, .phero__media', h), { opacity: 0, scale: .92, duration: 1.6, ease: 'expo.out' }, '-=1.2')
+      .from($$('.hero__ghost', h), { opacity: 0, x: 80, duration: 1.8, ease: 'expo.out' }, '-=1.5');
+    gsap.set(lines, { yPercent: 115 });
+  }
+
+  /* ---------------- Scroll reveals ---------------- */
+  $$('[data-split]').forEach(function (el) {
+    var words = splitWords(el);
+    gsap.from(words, { yPercent: 115, duration: 1.1, stagger: .035, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 88%' } });
+  });
+  gsap.set('[data-r]', { opacity: 0, y: 46 });
+  ScrollTrigger.batch('[data-r]', {
+    start: 'top 90%', once: true,
+    onEnter: function (els) { gsap.to(els, { opacity: 1, y: 0, duration: 1.1, stagger: .08, ease: 'expo.out', overwrite: true }); }
+  });
+  $$('[data-r-img]').forEach(function (m) {
+    var img = $('img', m);
+    gsap.fromTo(m, { clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0% 0 0 0)', duration: 1.5, ease: 'expo.inOut', scrollTrigger: { trigger: m, start: 'top 85%' } });
+    if (img) gsap.fromTo(img, { scale: 1.3 }, { scale: 1, duration: 1.8, ease: 'expo.out', scrollTrigger: { trigger: m, start: 'top 85%' } });
+  });
+  $$('[data-speed]').forEach(function (el) {
+    var s = parseFloat(el.getAttribute('data-speed'));
+    gsap.fromTo(el, { yPercent: -s * 50 }, { yPercent: s * 50, ease: 'none', scrollTrigger: { trigger: el.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+  });
+
+  /* fill text */
+  $$('.fill-text').forEach(function (el) {
+    var words = [];
+    (function walk(node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+        if (n.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(function (p) {
+            if (!p) return; if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(' ')); return; }
+            var s = document.createElement('span'); s.className = 'w'; s.textContent = p; frag.appendChild(s); words.push(s);
+          });
+          n.parentNode.replaceChild(frag, n);
+        } else if (n.nodeType === 1) walk(n);
+      });
+    })(el);
+    gsap.to(words, { opacity: 1, stagger: .1, ease: 'none', scrollTrigger: { trigger: el, start: 'top 78%', end: 'bottom 45%', scrub: .6 } });
+  });
+
+  /* odometer */
+  $$('[data-odo]').forEach(function (el) {
+    var val = el.getAttribute('data-odo'), cols = [];
+    el.innerHTML = '';
+    val.split('').forEach(function (d, i) {
+      var col = document.createElement('span'); col.className = 'odo__col';
+      var html = ''; for (var k = 0; k < 20; k++) html += '<span>' + (k % 10) + '</span>';
+      col.innerHTML = html; el.appendChild(col); cols.push({ col: col, d: parseInt(d, 10) + 10 });
+    });
+    var hasPlus = el.getAttribute('data-plus') !== '0';
+    if (hasPlus) { var plus = document.createElement('span'); plus.className = 'odo__plus'; plus.textContent = '+'; el.appendChild(plus); }
+    el.setAttribute('aria-label', val + (hasPlus ? '+' : ''));
+    cols.forEach(function (c, i) {
+      gsap.to(c.col, { yPercent: -c.d * 5, duration: 2.2 + i * .25, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 88%' } });
+    });
+  });
+  $$('[data-count]').forEach(function (el) {
+    var o = { v: 0 }, t = parseFloat(el.getAttribute('data-count'));
+    gsap.to(o, { v: t, duration: 2, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%' }, onUpdate: function () { el.textContent = Math.round(o.v).toLocaleString('en-IN'); } });
+  });
+
+  /* velocity marquees */
+  $$('.vmarquee__track').forEach(function (track, idx) {
+    var n = track.children.length; track.innerHTML += track.innerHTML;
+    Array.prototype.slice.call(track.children, n).forEach(function (c) { c.setAttribute('aria-hidden', 'true'); });
+    var dir = track.getAttribute('data-dir') === 'right' ? 1 : -1;
+    var loop = gsap.fromTo(track, { xPercent: dir === -1 ? 0 : -50 }, { xPercent: dir === -1 ? -50 : 0, duration: 32, ease: 'none', repeat: -1 });
+    var skew = gsap.quickTo(track, 'skewX', { duration: .5, ease: 'power3' });
+    ScrollTrigger.create({
+      trigger: track, start: 'top bottom', end: 'bottom top',
+      onUpdate: function (s) {
+        var v = s.getVelocity();
+        gsap.to(loop, { timeScale: (s.direction === 1 ? 1 : -1) * Math.min(1 + Math.abs(v) / 300, 6), duration: .3, overwrite: true, onComplete: function () { gsap.to(loop, { timeScale: s.direction === 1 ? 1 : -1, duration: 1.2 }); } });
+        skew(gsap.utils.clamp(-8, 8, v / -250));
+      }
+    });
+    ScrollTrigger.addEventListener('scrollEnd', function () { skew(0); });
+  });
+
+  /* horizontal journey — zig-zag timeline */
+  var journey = $('.journey');
+  if (journey) {
+    var jItems = $$('.jitem', journey), jYodo = $('.yodo', journey), jGhost = $('.journey__ghost', journey),
+        jEra = $('.journey__era', journey), jN = $('.journey__n', journey), jEras = $$('.eras button', journey), jFill = $('.jline i', journey);
+    var jActive = 0, pad2 = function (n) { return (n < 10 ? '0' : '') + n; };
+    var jActivate = function (i, force) {
+      if (i === jActive && !force) return;
+      jActive = i;
+      jItems.forEach(function (it, k) { it.classList.toggle('is-active', k === i); it.classList.toggle('is-past', k < i); });
+      var y = jItems[i].getAttribute('data-yr');
+      y.split('').forEach(function (d, k) { var col = jYodo.children[k]; if (col) col.style.transform = 'translateY(' + (-d * 10) + '%)'; });
+      jGhost.classList.add('is-swap'); setTimeout(function () { jGhost.textContent = y; jGhost.classList.remove('is-swap'); }, 300);
+      jEra.textContent = jItems[i].getAttribute('data-era');
+      jN.textContent = pad2(i + 1) + ' / ' + pad2(jItems.length);
+      var cur = 0; jEras.forEach(function (b, k) { if (+b.getAttribute('data-idx') <= i) cur = k; });
+      jEras.forEach(function (b, k) { b.setAttribute('aria-current', k === cur); });
+    };
+    var mm = gsap.matchMedia();
+    mm.add('(min-width: 900px)', function () {
+      var track = $('.jtrack', journey), nodeX = [];
+      var measure = function () { nodeX = jItems.map(function (it) { return it.offsetLeft + $('.jnode', it).offsetLeft; }); };
+      var dist = function () { return Math.max(0, track.scrollWidth - window.innerWidth); };
+      measure();
+      var tw = gsap.to(track, {
+        x: function () { return -dist(); }, ease: 'none',
+        scrollTrigger: {
+          trigger: journey, start: 'top top', end: function () { return '+=' + Math.round(dist() * 1.15); }, pin: true, scrub: .8, invalidateOnRefresh: true,
+          onRefresh: measure,
+          onUpdate: function (s) {
+            var first = nodeX[0], last = nodeX[nodeX.length - 1], target = first + s.progress * (last - first), best = 0;
+            for (var k = 0; k < nodeX.length; k++) if (nodeX[k] <= target + 2) best = k;
+            jActivate(best);
+            jFill.style.transform = 'scaleX(' + (target / track.scrollWidth).toFixed(4) + ')';
+          }
+        }
+      });
+      var st = tw.scrollTrigger;
+      jFill.style.transform = 'scaleX(' + (nodeX[0] / track.scrollWidth).toFixed(4) + ')';
+      // card contents rise in as each milestone slides into view
+      var firstView = [];
+      jItems.forEach(function (it) {
+        var up = it.classList.contains('jitem--top'), parts = $$('.jcard__media, .jcard__body > *', it);
+        if (it.offsetLeft < window.innerWidth * .92) { firstView.push({ parts: parts, up: up }); return; }
+        gsap.from(parts, { y: up ? -26 : 26, opacity: 0, duration: .8, stagger: .06, ease: 'expo.out',
+          scrollTrigger: { trigger: it, containerAnimation: tw, start: 'left 96%', toggleActions: 'play none none reverse' } });
+      });
+      // milestones already on screen animate in when the section arrives
+      var intro = gsap.timeline({ scrollTrigger: { trigger: journey, start: 'top 75%', once: true } });
+      intro.from($$('.jnode', journey).slice(0, firstView.length), { scale: 0, duration: .6, stagger: .1, ease: 'back.out(2)' }, 0);
+      firstView.forEach(function (f, k) { intro.from(f.parts, { y: f.up ? -26 : 26, opacity: 0, duration: .9, stagger: .06, ease: 'expo.out' }, .15 + k * .12); });
+      // era buttons jump to their milestone
+      var onEra = function (e) {
+        var b = e.target.closest('.eras button'); if (!b) return;
+        var i = +b.getAttribute('data-idx'), first = nodeX[0], last = nodeX[nodeX.length - 1];
+        var y = st.start + ((nodeX[i] - first) / (last - first)) * (st.end - st.start) + 2;
+        window.SBL_LENIS ? window.SBL_LENIS.scrollTo(y, { duration: 1.6 }) : window.scrollTo({ top: y, behavior: 'smooth' });
+      };
+      journey.addEventListener('click', onEra);
+      return function () { journey.removeEventListener('click', onEra); gsap.set(track, { clearProps: 'all' }); };
+    });
+    mm.add('(max-width: 899px)', function () {
+      journey.classList.add('is-static');
+      jItems.forEach(function (it) { gsap.from($('.jcard', it), { x: 40, opacity: 0, duration: .9, ease: 'expo.out', scrollTrigger: { trigger: it, start: 'top 90%', once: true } }); });
+      return function () { journey.classList.remove('is-static'); };
+    });
+  }
+  function initStaticJourney() { var j = $('.journey'); if (j) j.classList.add('is-static'); }
+
+  /* clip-reveal media */
+  $$('.clipmedia').forEach(function (cm) {
+    var inner = $('.clipmedia__inner', cm), img = $('img', cm), txt = $('.clipmedia__text', cm);
+    var tl = gsap.timeline({ scrollTrigger: { trigger: cm, start: 'top top', end: '+=120%', pin: true, scrub: 1 } });
+    tl.fromTo(inner, { clipPath: 'inset(18% 22% 18% 22% round 40px)' }, { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none' })
+      .fromTo(img, { scale: 1.25 }, { scale: 1, ease: 'none' }, 0)
+      .from(txt, { opacity: 0, y: 60, ease: 'power2.out', duration: .5 }, .45);
+  });
+
+  /* stacking cards */
+  var scards = $$('.scard');
+  scards.forEach(function (c, i) {
+    var next = scards[i + 1]; if (!next) return;
+    gsap.fromTo(c, { scale: 1, filter: 'brightness(1)' }, { scale: .9 + i * .012, filter: 'brightness(.9)', ease: 'none', scrollTrigger: { trigger: next, start: 'top bottom', end: 'top 25%', scrub: true } });
+  });
+
+  /* chart */
+  $$('.chart').forEach(function (ch) {
+    gsap.timeline({ scrollTrigger: { trigger: ch, start: 'top 75%' } })
+      .to($$('.bar i', ch), { scaleY: 1, duration: 1.4, stagger: .07, ease: 'expo.out' })
+      .to($$('.bar b', ch), { opacity: 1, duration: .5, stagger: .05 }, '-=1');
+  });
+
+  /* footer wordmark */
+  var word = $('.ftr__word');
+  if (word) {
+    var chars = splitChars(word);
+    gsap.to(chars, { y: 0, duration: 1.4, stagger: .035, ease: 'expo.out', scrollTrigger: { trigger: word, start: 'top 95%' } });
+  }
+
+  /* people float */
+  var pf = $('.people-float');
+  if (pf && fine) {
+    var px = gsap.quickTo(pf, 'x', { duration: .6, ease: 'power3' }), py = gsap.quickTo(pf, 'y', { duration: .6, ease: 'power3' });
+    var imgs = $$('img', pf);
+    $$('.person').forEach(function (p, i) {
+      p.addEventListener('pointerenter', function () { pf.classList.add('is-on'); imgs.forEach(function (im, k) { im.classList.toggle('is-on', k === i); }); });
+      p.addEventListener('pointerleave', function () { pf.classList.remove('is-on'); });
+      p.addEventListener('pointermove', function (e) { px(e.clientX + 30); py(e.clientY - 140); });
+    });
+  }
+
+  /* hero ghost parallax */
+  var ghost = $('.hero__ghost');
+  if (ghost) gsap.to(ghost, { xPercent: -25, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+
+  // hash on load
+  if (location.hash && lenis) {
+    var t0 = document.querySelector(location.hash);
+    if (t0 && !$('#catalog')) setTimeout(function () { lenis.scrollTo(t0, { offset: -90, immediate: true }); ScrollTrigger.refresh(); }, 120);
+  }
+  window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+  window.SBL_READY = true;
+})();
+
+/* ================= 3D packet carousel ================= */
+(function () {
+  'use strict';
+  var stage = document.querySelector('.carousel'); if (!stage) return;
+  var ring = stage.querySelector('.carousel__ring');
+  var items = Array.prototype.slice.call(ring.children);
+  var n = items.length;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nameEl = stage.querySelector('.carousel__label b'), catEl = stage.querySelector('.carousel__label small');
+  var radius = 0, angle = 0, vel = reduce ? 0 : 0.12, tilt = 0, targetTilt = -8, dragging = false, lastX = 0, boost = 0, front = -1;
+
+  function layout() {
+    var w = stage.clientWidth;
+    var cw = Math.max(110, Math.min(210, w * 0.36));
+    stage.style.setProperty('--cw', cw + 'px');
+    radius = Math.max(cw * 1.55, (cw * 1.05 * n) / (2 * Math.PI));
+    items.forEach(function (it, i) {
+      it.style.transform = 'rotateY(' + (i * 360 / n) + 'deg) translateZ(' + radius + 'px)';
+    });
+  }
+  layout(); window.addEventListener('resize', layout);
+
+  function render() {
+    tilt += (targetTilt - tilt) * 0.06;
+    ring.style.transform = 'translateZ(' + (-radius) + 'px) rotateX(' + tilt.toFixed(2) + 'deg) rotateY(' + angle.toFixed(2) + 'deg)';
+    // depth shading + front detection
+    var best = 0, bestCos = -2;
+    for (var i = 0; i < n; i++) {
+      var a = ((i * 360 / n + angle) % 360 + 360) % 360;
+      var cos = Math.cos(a * Math.PI / 180);
+      if (cos > bestCos) { bestCos = cos; best = i; }
+      items[i].style.opacity = (0.35 + 0.65 * (cos + 1) / 2).toFixed(3);
+      items[i].style.filter = cos < 0 ? 'blur(' + (-cos * 1.5).toFixed(1) + 'px)' : '';
+    }
+    if (best !== front) {
+      front = best;
+      if (nameEl) { nameEl.textContent = items[best].getAttribute('data-name'); catEl.textContent = items[best].getAttribute('data-cat'); }
+    }
+  }
+  var visible = true;
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }, { threshold: 0 }).observe(stage);
+  function tick() {
+    if (visible && !document.hidden) {
+      if (!dragging) { angle -= vel + boost; boost *= 0.94; }
+      render();
+    }
+    requestAnimationFrame(tick);
+  }
+  render();
+  if (!reduce) requestAnimationFrame(tick);
+
+  stage.addEventListener('pointerdown', function (e) { dragging = true; lastX = e.clientX; stage.setPointerCapture && stage.setPointerCapture(e.pointerId); });
+  stage.addEventListener('pointermove', function (e) {
+    var r = stage.getBoundingClientRect();
+    targetTilt = -8 + ((e.clientY - r.top) / r.height - 0.5) * -14;
+    if (!dragging) return;
+    var d = e.clientX - lastX; lastX = e.clientX;
+    angle += d * 0.35; boost = -d * 0.08;
+    if (reduce) render();
+  });
+  ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (ev) { stage.addEventListener(ev, function () { dragging = false; targetTilt = -8; }); });
+  // keyboard
+  stage.setAttribute('tabindex', '0');
+  stage.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { angle += 360 / n; render(); }
+    if (e.key === 'ArrowRight') { angle -= 360 / n; render(); }
+  });
+  // scroll velocity boost
+  var lastY = window.scrollY;
+  window.addEventListener('scroll', function () { var dy = window.scrollY - lastY; lastY = window.scrollY; boost += Math.max(-3, Math.min(3, dy * 0.02)); }, { passive: true });
+})();
+
+/* ================= WebGL silk background ================= */
+(function () {
+  'use strict';
+  var c = document.getElementById('silk'); if (!c) return;
+  var gl = c.getContext('webgl', { antialias: false, premultipliedAlpha: false, alpha: true });
+  if (!gl) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+  var fs = [
+    'precision mediump float;uniform vec2 r;uniform float t;uniform vec2 m;',
+    'float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+    'float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}',
+    'float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p*=2.02;a*=.5;}return v;}',
+    'void main(){vec2 uv=gl_FragCoord.xy/r;vec2 p=uv*vec2(r.x/r.y,1.)*1.6;',
+    'float tt=t*.05;vec2 q=vec2(fbm(p+tt),fbm(p+vec2(5.2,1.3)-tt));',
+    'vec2 w=vec2(fbm(p+3.*q+vec2(1.7,9.2)+tt*1.5+m*.3),fbm(p+3.*q+vec2(8.3,2.8)-tt));',
+    'float f=fbm(p+2.5*w);',
+    'vec3 ivory=vec3(.961,.933,.875),sand=vec3(.93,.84,.66),saff=vec3(.88,.64,.17),wine=vec3(.48,.11,.18);',
+    'vec3 col=mix(ivory,sand,smoothstep(.25,.75,f));col=mix(col,saff,smoothstep(.62,.95,f*length(q))*.55);',
+    'col=mix(col,wine,smoothstep(.75,1.,w.x*f)*.35);',
+    'col=mix(ivory,col,smoothstep(.0,.65,uv.x));',
+    'gl_FragColor=vec4(col,1.);}'
+  ].join('');
+  function sh(type, src) { var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; }
+  var pr = gl.createProgram(); gl.attachShader(pr, sh(gl.VERTEX_SHADER, vs)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, fs)); gl.linkProgram(pr);
+  if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) return;
+  gl.useProgram(pr);
+  var b = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, b); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+  var loc = gl.getAttribLocation(pr, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  var uR = gl.getUniformLocation(pr, 'r'), uT = gl.getUniformLocation(pr, 't'), uM = gl.getUniformLocation(pr, 'm');
+  var scale = 0.5; // render at half res for performance (it is a soft gradient)
+  function size() { c.width = Math.max(2, c.clientWidth * scale); c.height = Math.max(2, c.clientHeight * scale); gl.viewport(0, 0, c.width, c.height); }
+  size(); window.addEventListener('resize', size);
+  var mx = 0, my = 0, tmx = 0, tmy = 0;
+  window.addEventListener('pointermove', function (e) { tmx = e.clientX / innerWidth; tmy = e.clientY / innerHeight; }, { passive: true });
+  var vis = true; if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { vis = e[0].isIntersecting; }).observe(c);
+  var t0 = performance.now();
+  function draw() {
+    mx += (tmx - mx) * .03; my += (tmy - my) * .03;
+    gl.uniform2f(uR, c.width, c.height); gl.uniform1f(uT, (performance.now() - t0) / 1000); gl.uniform2f(uM, mx, my);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  }
+  if (reduce) { draw(); return; }
+  (function loop() { if (vis && !document.hidden) draw(); requestAnimationFrame(loop); })();
+})();
+
+});
+</script>
+
+</body>
+</html>
